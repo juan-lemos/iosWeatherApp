@@ -1,0 +1,436 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		0E5B13771EDF8A0300BDCD07 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E5B13761EDF8A0300BDCD07 /* AppDelegate.swift */; };
+		0E5B13791EDF8A0300BDCD07 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E5B13781EDF8A0300BDCD07 /* ViewController.swift */; };
+		0E5B137C1EDF8A0300BDCD07 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0E5B137A1EDF8A0300BDCD07 /* Main.storyboard */; };
+		0E5B137E1EDF8A0300BDCD07 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0E5B137D1EDF8A0300BDCD07 /* Assets.xcassets */; };
+		0E5B13811EDF8A0300BDCD07 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0E5B137F1EDF8A0300BDCD07 /* LaunchScreen.storyboard */; };
+		0E5B13941EDF9C1E00BDCD07 /* Captura de pantalla 2017-05-31 a las 9.49.11 p.m..png in Resources */ = {isa = PBXBuildFile; fileRef = 0E5B13931EDF9C1E00BDCD07 /* Captura de pantalla 2017-05-31 a las 9.49.11 p.m..png */; };
+		0E5B13961EDF9ECA00BDCD07 /* Media.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0E5B13951EDF9ECA00BDCD07 /* Media.xcassets */; };
+		0E5B139C1EDFA61C00BDCD07 /* WeatherIcon.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E5B139B1EDFA61C00BDCD07 /* WeatherIcon.swift */; };
+		0F0D5347D639FB85EB60B2FE /* Pods_obligatorio2.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8B40E852F6651BDEF8833EA7 /* Pods_obligatorio2.framework */; };
+		EB72B8A01EDFC757000B5323 /* weathericons-regular-webfont.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 0E5B13981EDFA5D200BDCD07 /* weathericons-regular-webfont.ttf */; };
+		EB72B8A21EDFCE1C000B5323 /* city.list.json in Resources */ = {isa = PBXBuildFile; fileRef = EB72B8A11EDFCE1C000B5323 /* city.list.json */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		0E5B13731EDF8A0300BDCD07 /* obligatorio2.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = obligatorio2.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		0E5B13761EDF8A0300BDCD07 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		0E5B13781EDF8A0300BDCD07 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		0E5B137B1EDF8A0300BDCD07 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		0E5B137D1EDF8A0300BDCD07 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		0E5B13801EDF8A0300BDCD07 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		0E5B13821EDF8A0300BDCD07 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		0E5B13931EDF9C1E00BDCD07 /* Captura de pantalla 2017-05-31 a las 9.49.11 p.m..png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Captura de pantalla 2017-05-31 a las 9.49.11 p.m..png"; sourceTree = "<group>"; };
+		0E5B13951EDF9ECA00BDCD07 /* Media.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Media.xcassets; sourceTree = "<group>"; };
+		0E5B13981EDFA5D200BDCD07 /* weathericons-regular-webfont.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "weathericons-regular-webfont.ttf"; path = "resources/weathericons-regular-webfont.ttf"; sourceTree = "<group>"; };
+		0E5B139B1EDFA61C00BDCD07 /* WeatherIcon.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WeatherIcon.swift; sourceTree = "<group>"; };
+		7E1957B2EDCC6D443DCD3D68 /* Pods-obligatorio2.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-obligatorio2.release.xcconfig"; path = "Pods/Target Support Files/Pods-obligatorio2/Pods-obligatorio2.release.xcconfig"; sourceTree = "<group>"; };
+		8B40E852F6651BDEF8833EA7 /* Pods_obligatorio2.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_obligatorio2.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		AA4BE9C0FFE25E8D8B8FF088 /* Pods-obligatorio2.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-obligatorio2.debug.xcconfig"; path = "Pods/Target Support Files/Pods-obligatorio2/Pods-obligatorio2.debug.xcconfig"; sourceTree = "<group>"; };
+		EB72B8A11EDFCE1C000B5323 /* city.list.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = city.list.json; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		0E5B13701EDF8A0200BDCD07 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				0F0D5347D639FB85EB60B2FE /* Pods_obligatorio2.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		0E5B136A1EDF8A0200BDCD07 = {
+			isa = PBXGroup;
+			children = (
+				0E5B13751EDF8A0300BDCD07 /* obligatorio2 */,
+				0E5B13741EDF8A0300BDCD07 /* Products */,
+				8FD30DDC4F3E93F6806C9F83 /* Pods */,
+				4078A3EA103B4DEC577BF7BD /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		0E5B13741EDF8A0300BDCD07 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				0E5B13731EDF8A0300BDCD07 /* obligatorio2.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		0E5B13751EDF8A0300BDCD07 /* obligatorio2 */ = {
+			isa = PBXGroup;
+			children = (
+				EB72B8A51EDFCFB8000B5323 /* Utils */,
+				0E5B139A1EDFA5E200BDCD07 /* resources */,
+				0E5B13761EDF8A0300BDCD07 /* AppDelegate.swift */,
+				0E5B13781EDF8A0300BDCD07 /* ViewController.swift */,
+				0E5B137A1EDF8A0300BDCD07 /* Main.storyboard */,
+				0E5B13931EDF9C1E00BDCD07 /* Captura de pantalla 2017-05-31 a las 9.49.11 p.m..png */,
+				0E5B137F1EDF8A0300BDCD07 /* LaunchScreen.storyboard */,
+				0E5B13821EDF8A0300BDCD07 /* Info.plist */,
+			);
+			path = obligatorio2;
+			sourceTree = "<group>";
+		};
+		0E5B139A1EDFA5E200BDCD07 /* resources */ = {
+			isa = PBXGroup;
+			children = (
+				EB72B8A41EDFCE33000B5323 /* fonts */,
+				EB72B8A31EDFCE2A000B5323 /* images */,
+				EB72B8A11EDFCE1C000B5323 /* city.list.json */,
+			);
+			name = resources;
+			sourceTree = "<group>";
+		};
+		4078A3EA103B4DEC577BF7BD /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				8B40E852F6651BDEF8833EA7 /* Pods_obligatorio2.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		8FD30DDC4F3E93F6806C9F83 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				AA4BE9C0FFE25E8D8B8FF088 /* Pods-obligatorio2.debug.xcconfig */,
+				7E1957B2EDCC6D443DCD3D68 /* Pods-obligatorio2.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		EB72B8A31EDFCE2A000B5323 /* images */ = {
+			isa = PBXGroup;
+			children = (
+				0E5B137D1EDF8A0300BDCD07 /* Assets.xcassets */,
+				0E5B13951EDF9ECA00BDCD07 /* Media.xcassets */,
+			);
+			name = images;
+			sourceTree = "<group>";
+		};
+		EB72B8A41EDFCE33000B5323 /* fonts */ = {
+			isa = PBXGroup;
+			children = (
+				0E5B13981EDFA5D200BDCD07 /* weathericons-regular-webfont.ttf */,
+			);
+			name = fonts;
+			sourceTree = "<group>";
+		};
+		EB72B8A51EDFCFB8000B5323 /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				0E5B139B1EDFA61C00BDCD07 /* WeatherIcon.swift */,
+			);
+			name = Utils;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		0E5B13721EDF8A0200BDCD07 /* obligatorio2 */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 0E5B13851EDF8A0300BDCD07 /* Build configuration list for PBXNativeTarget "obligatorio2" */;
+			buildPhases = (
+				46F62DFAA5AB1A3D3BC8C554 /* [CP] Check Pods Manifest.lock */,
+				0E5B136F1EDF8A0200BDCD07 /* Sources */,
+				0E5B13701EDF8A0200BDCD07 /* Frameworks */,
+				0E5B13711EDF8A0200BDCD07 /* Resources */,
+				79B6FE6FC1F56EB61C7F74F6 /* [CP] Embed Pods Frameworks */,
+				28B1CC7B3FBF342E31A72D18 /* [CP] Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = obligatorio2;
+			productName = obligatorio2;
+			productReference = 0E5B13731EDF8A0300BDCD07 /* obligatorio2.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		0E5B136B1EDF8A0200BDCD07 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0820;
+				LastUpgradeCheck = 0820;
+				ORGANIZATIONNAME = UCUDAL;
+				TargetAttributes = {
+					0E5B13721EDF8A0200BDCD07 = {
+						CreatedOnToolsVersion = 8.2.1;
+						ProvisioningStyle = Automatic;
+					};
+				};
+			};
+			buildConfigurationList = 0E5B136E1EDF8A0200BDCD07 /* Build configuration list for PBXProject "obligatorio2" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 0E5B136A1EDF8A0200BDCD07;
+			productRefGroup = 0E5B13741EDF8A0300BDCD07 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				0E5B13721EDF8A0200BDCD07 /* obligatorio2 */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		0E5B13711EDF8A0200BDCD07 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				0E5B13961EDF9ECA00BDCD07 /* Media.xcassets in Resources */,
+				0E5B13811EDF8A0300BDCD07 /* LaunchScreen.storyboard in Resources */,
+				EB72B8A01EDFC757000B5323 /* weathericons-regular-webfont.ttf in Resources */,
+				0E5B13941EDF9C1E00BDCD07 /* Captura de pantalla 2017-05-31 a las 9.49.11 p.m..png in Resources */,
+				0E5B137E1EDF8A0300BDCD07 /* Assets.xcassets in Resources */,
+				EB72B8A21EDFCE1C000B5323 /* city.list.json in Resources */,
+				0E5B137C1EDF8A0300BDCD07 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		28B1CC7B3FBF342E31A72D18 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-obligatorio2/Pods-obligatorio2-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		46F62DFAA5AB1A3D3BC8C554 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		79B6FE6FC1F56EB61C7F74F6 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-obligatorio2/Pods-obligatorio2-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		0E5B136F1EDF8A0200BDCD07 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				0E5B13791EDF8A0300BDCD07 /* ViewController.swift in Sources */,
+				0E5B139C1EDFA61C00BDCD07 /* WeatherIcon.swift in Sources */,
+				0E5B13771EDF8A0300BDCD07 /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		0E5B137A1EDF8A0300BDCD07 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				0E5B137B1EDF8A0300BDCD07 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		0E5B137F1EDF8A0300BDCD07 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				0E5B13801EDF8A0300BDCD07 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		0E5B13831EDF8A0300BDCD07 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.2;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		0E5B13841EDF8A0300BDCD07 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		0E5B13861EDF8A0300BDCD07 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = AA4BE9C0FFE25E8D8B8FF088 /* Pods-obligatorio2.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = obligatorio2/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = ucu.id.primero.obligatorio2;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+			};
+			name = Debug;
+		};
+		0E5B13871EDF8A0300BDCD07 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 7E1957B2EDCC6D443DCD3D68 /* Pods-obligatorio2.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = obligatorio2/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = ucu.id.primero.obligatorio2;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		0E5B136E1EDF8A0200BDCD07 /* Build configuration list for PBXProject "obligatorio2" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				0E5B13831EDF8A0300BDCD07 /* Debug */,
+				0E5B13841EDF8A0300BDCD07 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		0E5B13851EDF8A0300BDCD07 /* Build configuration list for PBXNativeTarget "obligatorio2" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				0E5B13861EDF8A0300BDCD07 /* Debug */,
+				0E5B13871EDF8A0300BDCD07 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 0E5B136B1EDF8A0200BDCD07 /* Project object */;
+}
