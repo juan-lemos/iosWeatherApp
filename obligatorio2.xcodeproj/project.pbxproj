@@ -22,6 +22,7 @@
 		EB0D44681EE31CDC00E6148C /* DayWeatherCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB0D44671EE31CDC00E6148C /* DayWeatherCollectionViewCell.swift */; };
 		EB72B8A01EDFC757000B5323 /* weathericons-regular-webfont.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 0E5B13981EDFA5D200BDCD07 /* weathericons-regular-webfont.ttf */; };
 		EB72B8A21EDFCE1C000B5323 /* city.list.json in Resources */ = {isa = PBXBuildFile; fileRef = EB72B8A11EDFCE1C000B5323 /* city.list.json */; };
+		EB9088891EE35D9600EF6A26 /* Screen.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB9088881EE35D9600EF6A26 /* Screen.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -44,6 +45,7 @@
 		EB0D44651EE2FB6100E6148C /* Screen Shot 2017-06-03 at 11.12.21 AM.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Screen Shot 2017-06-03 at 11.12.21 AM.png"; sourceTree = "<group>"; };
 		EB0D44671EE31CDC00E6148C /* DayWeatherCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DayWeatherCollectionViewCell.swift; sourceTree = "<group>"; };
 		EB72B8A11EDFCE1C000B5323 /* city.list.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = city.list.json; sourceTree = "<group>"; };
+		EB9088881EE35D9600EF6A26 /* Screen.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Screen.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -167,6 +169,7 @@
 			children = (
 				0E5B139B1EDFA61C00BDCD07 /* WeatherIcon.swift */,
 				EB0D44221EE28EB600E6148C /* ApisKeys.swift */,
+				EB9088881EE35D9600EF6A26 /* Screen.swift */,
 			);
 			name = Utils;
 			sourceTree = "<group>";
@@ -299,6 +302,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EB9088891EE35D9600EF6A26 /* Screen.swift in Sources */,
 				EB0D44681EE31CDC00E6148C /* DayWeatherCollectionViewCell.swift in Sources */,
 				0E5B139C1EDFA61C00BDCD07 /* WeatherIcon.swift in Sources */,
 				0E5B13771EDF8A0300BDCD07 /* AppDelegate.swift in Sources */,

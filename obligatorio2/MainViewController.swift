@@ -19,13 +19,16 @@ class MainViewController:UIViewController{
     @IBOutlet weak var temperatureLabel: UILabel!
     
     
-    let screenSize = UIScreen.main.bounds
+    
+    var relationWidth:CGFloat!
+    var relationHeight:CGFloat!
     
     //MARK: -UIViewController methods
     override func viewDidLoad() {
         super.viewDidLoad()
+        relationWidth = Screen.shared.relationWidth
+        relationHeight = Screen.shared.relationHeight
         modifyConstraintsAndFontsSizes()
-        
         print(cityLabel.font.pointSize)
         
         //print(temperatureLabel.size)
@@ -40,15 +43,11 @@ class MainViewController:UIViewController{
     }
     
     
-    //MARK: -Utils methods
+    //MARK: -change UI methods
+    
+    
+    
     func modifyConstraintsAndFontsSizes(){
-        let originalWidth:CGFloat = 375.0
-        let originalHeigth:CGFloat = 667.0
-        let screenWidth = screenSize.width
-        let screenHeight = screenSize.height
-        let relationWidth = screenWidth/originalWidth
-        let relationHeight = screenHeight/originalHeigth
-        
         cityLabelTopConstraint.constant = cityLabelTopConstraint.constant * relationHeight
         buttonTopConstraint.constant = buttonTopConstraint.constant * relationHeight
         buttonLeadingConstraint.constant = buttonLeadingConstraint.constant * relationWidth
@@ -59,7 +58,7 @@ class MainViewController:UIViewController{
         
         //relative to height because we are using always portrait
         var multiplier:CGFloat = 1.0
-        if (screenHeight==480.0){//iphone4
+        if (Screen.shared.screenHeight==480.0){//iphone4
             multiplier = 1.2
         }
         cityLabel.font = UIFont(name: cityLabel.font.fontName , size: cityLabel.font.pointSize * relationHeight * multiplier)
@@ -67,6 +66,17 @@ class MainViewController:UIViewController{
         temperatureLabel.font = UIFont(name: temperatureLabel.font.fontName , size: temperatureLabel.font.pointSize * relationHeight)
     }
     
+    
+    func changeLabelTemperature(label:UILabel, originalSize:Float){
+        let smallFontRelation = 40/69
+//        let
+        
+        
+//        myMutableString = NSMutableAttributedString(string: myString, attributes: [NSFontAttributeName:UIFont(name: "Georgia", size: 18.0)!])
+//        myMutableString.addAttribute(NSForegroundColorAttributeName, value: UIColor.redColor(), range: NSRange(location:2,length:4))
+//        label.attributedText = myMutableString
+//    
+    }
     
     
 }
