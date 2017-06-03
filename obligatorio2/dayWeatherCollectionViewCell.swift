@@ -8,7 +8,7 @@
 
 import UIKit
 
-class dayWeatherCollectionViewCell: UICollectionViewCell {
+class DayWeatherCollectionViewCell: UICollectionViewCell {
     @IBOutlet weak var dayLabel: UILabel!
     @IBOutlet weak var weatherIconLabel: UILabel!
     @IBOutlet weak var temperatureLabel: UILabel!

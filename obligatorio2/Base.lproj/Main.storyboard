@@ -36,12 +36,6 @@
                                 <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7eL-4P-NAH">
-                                <rect key="frame" x="0.0" y="82" width="375" height="210"/>
-                                <fontDescription key="fontDescription" name="WeatherIcons-Regular" family="Weather Icons" pointSize="145"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qvV-7l-WXT">
                                 <rect key="frame" x="318" y="35" width="32" height="33"/>
                                 <constraints>
@@ -52,6 +46,12 @@
                                     <segue destination="BYZ-38-t0r" kind="presentation" id="OE6-xh-fPn"/>
                                 </connections>
                             </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7eL-4P-NAH">
+                                <rect key="frame" x="0.0" y="82" width="375" height="210"/>
+                                <fontDescription key="fontDescription" name="WeatherIcons-Regular" family="Weather Icons" pointSize="145"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="7ºC" textAlignment="center" lineBreakMode="wordWrap" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ifg-ee-2df">
                                 <rect key="frame" x="131" y="292" width="113" height="81.5"/>
                                 <fontDescription key="fontDescription" name="HelveticaNeue-Medium" family="Helvetica Neue" pointSize="68"/>
@@ -70,7 +70,7 @@
                                     <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                                 </collectionViewFlowLayout>
                                 <cells>
-                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="dayWeatherCollectionViewCell" id="6Bm-cb-yYR" customClass="dayWeatherCollectionViewCell" customModule="obligatorio2" customModuleProvider="target">
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="dayWeatherCollectionViewCell" id="6Bm-cb-yYR" customClass="DayWeatherCollectionViewCell" customModule="obligatorio2" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="3" width="206" height="152"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
@@ -137,7 +137,17 @@
                         </constraints>
                     </view>
                     <connections>
-                        <outlet property="weatherIconLabel" destination="7eL-4P-NAH" id="TLx-ay-Vyq"/>
+                        <outlet property="buttonLeadingConstraint" destination="Rgh-aE-YoH" id="uKD-EC-wQs"/>
+                        <outlet property="buttonTopConstraint" destination="Fmd-Le-ShC" id="Dy2-bC-6XO"/>
+                        <outlet property="buttonTrailingConstraint" destination="xyY-Ee-rKo" id="bNU-gy-WU8"/>
+                        <outlet property="cityLabel" destination="92e-L6-LaD" id="eKn-cX-E4d"/>
+                        <outlet property="cityLabelTopConstraint" destination="hon-B5-zAS" id="jiM-AE-l8o"/>
+                        <outlet property="collectionViewHeight" destination="Vo4-5c-hxH" id="kcn-jb-tXC"/>
+                        <outlet property="settingsButton" destination="qvV-7l-WXT" id="w3d-2i-hTD"/>
+                        <outlet property="temperatureLabel" destination="I6h-Ji-VAD" id="aSw-Th-ylJ"/>
+                        <outlet property="temperatureTopConstraint" destination="aK5-7o-Bdx" id="5dx-zB-Unl"/>
+                        <outlet property="weatherIconLabel" destination="7eL-4P-NAH" id="2rL-mV-iPX"/>
+                        <outlet property="weatherIconTopConstraint" destination="abv-Dt-mmk" id="whV-D8-R3S"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="pdE-mJ-RHf" userLabel="First Responder" sceneMemberID="firstResponder"/>
