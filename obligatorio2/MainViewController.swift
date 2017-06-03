@@ -30,7 +30,7 @@ class MainViewController:UIViewController{
         relationHeight = Screen.shared.relationHeight
         modifyConstraintsAndFontsSizes()
         print(cityLabel.font.pointSize)
-        
+        changeLabelTemperature(label: temperatureLabel, originalMaxSize: CGFloat(68), temperature: 89, unit: "°C")
         //print(temperatureLabel.size)
         
         //        print(temperatureLabel.font.pointSize)
@@ -67,15 +67,14 @@ class MainViewController:UIViewController{
     }
     
     
-    func changeLabelTemperature(label:UILabel, originalSize:Float){
-        let smallFontRelation = 40/69
-//        let
-        
-        
-//        myMutableString = NSMutableAttributedString(string: myString, attributes: [NSFontAttributeName:UIFont(name: "Georgia", size: 18.0)!])
-//        myMutableString.addAttribute(NSForegroundColorAttributeName, value: UIColor.redColor(), range: NSRange(location:2,length:4))
-//        label.attributedText = myMutableString
-//    
+    func changeLabelTemperature(label:UILabel, originalMaxSize:CGFloat, temperature:Int, unit:String){
+        let bigFontSize = originalMaxSize * relationHeight
+        let smallFontSize = bigFontSize * Screen.shared.smallBigFontTemperatureRelation
+        print(Screen.shared.smallBigFontTemperatureRelation)
+        let myMutableString = NSMutableAttributedString(string: "\(temperature)\(unit)")
+        myMutableString.addAttributes([NSFontAttributeName:UIFont(name: "HelveticaNeue-Medium", size: bigFontSize)!], range: NSRange(location:0,length:"\(temperature)".characters.count))
+        myMutableString.addAttributes([NSFontAttributeName:UIFont(name: "HelveticaNeue-Medium", size: smallFontSize)!], range: NSRange(location:"\(temperature)".characters.count,length:unit.characters.count))
+        label.attributedText = myMutableString
     }
     
     

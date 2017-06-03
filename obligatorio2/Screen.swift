@@ -45,4 +45,11 @@ class Screen {
         }
     }
     
+    private let internalSmallBigFontTemperatureRelation:CGFloat=40/69
+    var smallBigFontTemperatureRelation:CGFloat{get{
+        return internalSmallBigFontTemperatureRelation}
+    }
+    
+    
+    
 }
