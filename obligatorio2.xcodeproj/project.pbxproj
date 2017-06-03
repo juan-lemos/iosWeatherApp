@@ -8,14 +8,17 @@
 
 /* Begin PBXBuildFile section */
 		0E5B13771EDF8A0300BDCD07 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E5B13761EDF8A0300BDCD07 /* AppDelegate.swift */; };
-		0E5B13791EDF8A0300BDCD07 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E5B13781EDF8A0300BDCD07 /* ViewController.swift */; };
 		0E5B137C1EDF8A0300BDCD07 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0E5B137A1EDF8A0300BDCD07 /* Main.storyboard */; };
 		0E5B137E1EDF8A0300BDCD07 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0E5B137D1EDF8A0300BDCD07 /* Assets.xcassets */; };
 		0E5B13811EDF8A0300BDCD07 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0E5B137F1EDF8A0300BDCD07 /* LaunchScreen.storyboard */; };
-		0E5B13941EDF9C1E00BDCD07 /* Captura de pantalla 2017-05-31 a las 9.49.11 p.m..png in Resources */ = {isa = PBXBuildFile; fileRef = 0E5B13931EDF9C1E00BDCD07 /* Captura de pantalla 2017-05-31 a las 9.49.11 p.m..png */; };
+		0E5B13941EDF9C1E00BDCD07 /* example_model.png in Resources */ = {isa = PBXBuildFile; fileRef = 0E5B13931EDF9C1E00BDCD07 /* example_model.png */; };
 		0E5B13961EDF9ECA00BDCD07 /* Media.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0E5B13951EDF9ECA00BDCD07 /* Media.xcassets */; };
 		0E5B139C1EDFA61C00BDCD07 /* WeatherIcon.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E5B139B1EDFA61C00BDCD07 /* WeatherIcon.swift */; };
 		0F0D5347D639FB85EB60B2FE /* Pods_obligatorio2.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8B40E852F6651BDEF8833EA7 /* Pods_obligatorio2.framework */; };
+		EB0D441C1EE28D5C00E6148C /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB0D441B1EE28D5C00E6148C /* MainViewController.swift */; };
+		EB0D441E1EE28D7000E6148C /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB0D441D1EE28D7000E6148C /* SettingsViewController.swift */; };
+		EB0D44231EE28EB600E6148C /* ApisKeys.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB0D44221EE28EB600E6148C /* ApisKeys.swift */; };
+		EB0D44271EE296BA00E6148C /* DayCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB0D44261EE296BA00E6148C /* DayCollectionViewCell.swift */; };
 		EB72B8A01EDFC757000B5323 /* weathericons-regular-webfont.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 0E5B13981EDFA5D200BDCD07 /* weathericons-regular-webfont.ttf */; };
 		EB72B8A21EDFCE1C000B5323 /* city.list.json in Resources */ = {isa = PBXBuildFile; fileRef = EB72B8A11EDFCE1C000B5323 /* city.list.json */; };
 /* End PBXBuildFile section */
@@ -23,18 +26,21 @@
 /* Begin PBXFileReference section */
 		0E5B13731EDF8A0300BDCD07 /* obligatorio2.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = obligatorio2.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		0E5B13761EDF8A0300BDCD07 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		0E5B13781EDF8A0300BDCD07 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		0E5B137B1EDF8A0300BDCD07 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		0E5B137D1EDF8A0300BDCD07 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		0E5B13801EDF8A0300BDCD07 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		0E5B13821EDF8A0300BDCD07 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		0E5B13931EDF9C1E00BDCD07 /* Captura de pantalla 2017-05-31 a las 9.49.11 p.m..png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Captura de pantalla 2017-05-31 a las 9.49.11 p.m..png"; sourceTree = "<group>"; };
+		0E5B13931EDF9C1E00BDCD07 /* example_model.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = example_model.png; sourceTree = "<group>"; };
 		0E5B13951EDF9ECA00BDCD07 /* Media.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Media.xcassets; sourceTree = "<group>"; };
 		0E5B13981EDFA5D200BDCD07 /* weathericons-regular-webfont.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "weathericons-regular-webfont.ttf"; path = "resources/weathericons-regular-webfont.ttf"; sourceTree = "<group>"; };
 		0E5B139B1EDFA61C00BDCD07 /* WeatherIcon.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WeatherIcon.swift; sourceTree = "<group>"; };
 		7E1957B2EDCC6D443DCD3D68 /* Pods-obligatorio2.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-obligatorio2.release.xcconfig"; path = "Pods/Target Support Files/Pods-obligatorio2/Pods-obligatorio2.release.xcconfig"; sourceTree = "<group>"; };
 		8B40E852F6651BDEF8833EA7 /* Pods_obligatorio2.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_obligatorio2.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		AA4BE9C0FFE25E8D8B8FF088 /* Pods-obligatorio2.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-obligatorio2.debug.xcconfig"; path = "Pods/Target Support Files/Pods-obligatorio2/Pods-obligatorio2.debug.xcconfig"; sourceTree = "<group>"; };
+		EB0D441B1EE28D5C00E6148C /* MainViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
+		EB0D441D1EE28D7000E6148C /* SettingsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
+		EB0D44221EE28EB600E6148C /* ApisKeys.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ApisKeys.swift; sourceTree = "<group>"; };
+		EB0D44261EE296BA00E6148C /* DayCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DayCollectionViewCell.swift; sourceTree = "<group>"; };
 		EB72B8A11EDFCE1C000B5323 /* city.list.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = city.list.json; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -71,12 +77,10 @@
 		0E5B13751EDF8A0300BDCD07 /* obligatorio2 */ = {
 			isa = PBXGroup;
 			children = (
+				EB0D441F1EE28D7A00E6148C /* MainStoryboard */,
 				EB72B8A51EDFCFB8000B5323 /* Utils */,
 				0E5B139A1EDFA5E200BDCD07 /* resources */,
 				0E5B13761EDF8A0300BDCD07 /* AppDelegate.swift */,
-				0E5B13781EDF8A0300BDCD07 /* ViewController.swift */,
-				0E5B137A1EDF8A0300BDCD07 /* Main.storyboard */,
-				0E5B13931EDF9C1E00BDCD07 /* Captura de pantalla 2017-05-31 a las 9.49.11 p.m..png */,
 				0E5B137F1EDF8A0300BDCD07 /* LaunchScreen.storyboard */,
 				0E5B13821EDF8A0300BDCD07 /* Info.plist */,
 			);
@@ -110,9 +114,29 @@
 			name = Pods;
 			sourceTree = "<group>";
 		};
+		EB0D441F1EE28D7A00E6148C /* MainStoryboard */ = {
+			isa = PBXGroup;
+			children = (
+				0E5B137A1EDF8A0300BDCD07 /* Main.storyboard */,
+				EB0D441B1EE28D5C00E6148C /* MainViewController.swift */,
+				EB0D44281EE296C100E6148C /* SettingsViewController */,
+			);
+			name = MainStoryboard;
+			sourceTree = "<group>";
+		};
+		EB0D44281EE296C100E6148C /* SettingsViewController */ = {
+			isa = PBXGroup;
+			children = (
+				EB0D441D1EE28D7000E6148C /* SettingsViewController.swift */,
+				EB0D44261EE296BA00E6148C /* DayCollectionViewCell.swift */,
+			);
+			name = SettingsViewController;
+			sourceTree = "<group>";
+		};
 		EB72B8A31EDFCE2A000B5323 /* images */ = {
 			isa = PBXGroup;
 			children = (
+				0E5B13931EDF9C1E00BDCD07 /* example_model.png */,
 				0E5B137D1EDF8A0300BDCD07 /* Assets.xcassets */,
 				0E5B13951EDF9ECA00BDCD07 /* Media.xcassets */,
 			);
@@ -131,6 +155,7 @@
 			isa = PBXGroup;
 			children = (
 				0E5B139B1EDFA61C00BDCD07 /* WeatherIcon.swift */,
+				EB0D44221EE28EB600E6148C /* ApisKeys.swift */,
 			);
 			name = Utils;
 			sourceTree = "<group>";
@@ -200,7 +225,7 @@
 				0E5B13961EDF9ECA00BDCD07 /* Media.xcassets in Resources */,
 				0E5B13811EDF8A0300BDCD07 /* LaunchScreen.storyboard in Resources */,
 				EB72B8A01EDFC757000B5323 /* weathericons-regular-webfont.ttf in Resources */,
-				0E5B13941EDF9C1E00BDCD07 /* Captura de pantalla 2017-05-31 a las 9.49.11 p.m..png in Resources */,
+				0E5B13941EDF9C1E00BDCD07 /* example_model.png in Resources */,
 				0E5B137E1EDF8A0300BDCD07 /* Assets.xcassets in Resources */,
 				EB72B8A21EDFCE1C000B5323 /* city.list.json in Resources */,
 				0E5B137C1EDF8A0300BDCD07 /* Main.storyboard in Resources */,
@@ -262,9 +287,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				0E5B13791EDF8A0300BDCD07 /* ViewController.swift in Sources */,
 				0E5B139C1EDFA61C00BDCD07 /* WeatherIcon.swift in Sources */,
+				EB0D44271EE296BA00E6148C /* DayCollectionViewCell.swift in Sources */,
 				0E5B13771EDF8A0300BDCD07 /* AppDelegate.swift in Sources */,
+				EB0D441E1EE28D7000E6148C /* SettingsViewController.swift in Sources */,
+				EB0D44231EE28EB600E6148C /* ApisKeys.swift in Sources */,
+				EB0D441C1EE28D5C00E6148C /* MainViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
