@@ -108,6 +108,10 @@
                                         </connections>
                                     </collectionViewCell>
                                 </cells>
+                                <connections>
+                                    <outlet property="dataSource" destination="iLa-VA-jpe" id="TTD-89-Yl5"/>
+                                    <outlet property="delegate" destination="iLa-VA-jpe" id="1AQ-CW-4mK"/>
+                                </connections>
                             </collectionView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="7ºC" textAlignment="center" lineBreakMode="wordWrap" numberOfLines="0" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ifg-ee-2df">
                                 <rect key="frame" x="131" y="290.5" width="113" height="81.5"/>

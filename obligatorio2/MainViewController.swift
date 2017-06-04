@@ -1,6 +1,7 @@
 import UIKit
 
-class MainViewController:UIViewController{
+class MainViewController:UIViewController,UICollectionViewDataSource, UICollectionViewDelegateFlowLayout{
+//=============================================================================
     //MARK: -constraints
     @IBOutlet weak var cityLabelTopConstraint: NSLayoutConstraint!
     @IBOutlet weak var buttonTopConstraint: NSLayoutConstraint!
@@ -11,19 +12,21 @@ class MainViewController:UIViewController{
     @IBOutlet weak var collectionViewHeight: NSLayoutConstraint!
     
     
-    
+//=============================================================================
     //MARK: -elements
     @IBOutlet weak var cityLabel: UILabel!
     @IBOutlet weak var settingsButton: UIButton!
     @IBOutlet weak var weatherIconLabel: UILabel!
     @IBOutlet weak var temperatureLabel: UILabel!
     
-    
-    
     var relationWidth:CGFloat!
     var relationHeight:CGFloat!
     
+    let cellCollectionViewIdentifier:String="dayWeatherCollectionViewCell"
+    
+//=============================================================================
     //MARK: -UIViewController methods
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         relationWidth = Screen.shared.relationWidth
@@ -42,11 +45,47 @@ class MainViewController:UIViewController{
         //        self.weatherIconLabel.text = WeatherIcon(condition: 201, iconString: "01n").iconText
     }
     
+//=============================================================================
+    //MARK: -UICollectionViewDelegateFlowLayout
     
-    //MARK: -change UI methods
+    
+    func collectionView(_ collectionView: UICollectionView,
+                        layout collectionViewLayout: UICollectionViewLayout,
+                        sizeForItemAt indexPath: IndexPath) -> CGSize {
+
+        let widthPerItem = collectionView.bounds.size.width / 4
+        return CGSize(width: widthPerItem, height: collectionView.bounds.size.height)
+    }
+    
+    func collectionView(_ collectionView: UICollectionView,
+                        layout collectionViewLayout: UICollectionViewLayout,
+                        minimumLineSpacingForSectionAt section: Int) -> CGFloat {
+        return 0
+    }
+    
+//=============================================================================
+    //MARK: -UICollectionDataSource
+
+    func numberOfSections(in collectionView: UICollectionView) -> Int {
+        return 1
+    }
+    
+    func collectionView(_ collectionView: UICollectionView,
+                                 numberOfItemsInSection section: Int) -> Int {
+        return 6
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: cellCollectionViewIdentifier,
+                                                      for: indexPath) as! DayWeatherCollectionViewCell
+        cell.backgroundColor = UIColor.cyan
+        
+        return cell
+    }
     
     
-    
+//=============================================================================
+    //MARK: -Change UI methods
     func modifyConstraintsAndFontsSizes(){
         cityLabelTopConstraint.constant = cityLabelTopConstraint.constant * relationHeight
         buttonTopConstraint.constant = buttonTopConstraint.constant * relationHeight
@@ -82,8 +121,6 @@ class MainViewController:UIViewController{
         myMutableString.addAttributes([NSFontAttributeName:UIFont(name: "HelveticaNeue-Medium", size: smallFontSize)!], range: NSRange(location:"\(temperature)".characters.count,length:unit.characters.count))
         label.attributedText = myMutableString
     }
-    
-    
 }
 
 
