@@ -12,7 +12,7 @@ class DayWeatherCollectionViewCell: UICollectionViewCell {
     @IBOutlet weak var dayLabel: UILabel!
     @IBOutlet weak var weatherIconLabel: UILabel!
     @IBOutlet weak var temperatureLabel: UILabel!
-    
-    
+    @IBOutlet weak var weatherIconLabelTopConstraint: NSLayoutConstraint!
+    @IBOutlet weak var temperatureLabelTopConstraint: NSLayoutConstraint!
     
 }
