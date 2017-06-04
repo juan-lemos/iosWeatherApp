@@ -145,6 +145,7 @@
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="backgroundViewImage" destination="Hti-d2-lRB" id="y4b-Zd-fp7"/>
                         <outlet property="buttonHeightConstraint" destination="w7M-yd-VnZ" id="6lQ-jR-F0Y"/>
                         <outlet property="buttonLeadingConstraint" destination="Rgh-aE-YoH" id="uKD-EC-wQs"/>
                         <outlet property="buttonTopConstraint" destination="Fmd-Le-ShC" id="Dy2-bC-6XO"/>

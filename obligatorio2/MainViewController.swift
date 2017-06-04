@@ -18,10 +18,12 @@ class MainViewController:UIViewController,UICollectionViewDataSource, UICollecti
     @IBOutlet weak var settingsButton: UIButton!
     @IBOutlet weak var weatherIconLabel: UILabel!
     @IBOutlet weak var temperatureLabel: UILabel!
+    @IBOutlet weak var backgroundViewImage: UIImageView!
     
+//=============================================================================
+    //MARK: -variables of Controller
     var relationWidth:CGFloat!
     var relationHeight:CGFloat!
-    
     let cellCollectionViewIdentifier:String="dayWeatherCollectionViewCell"
     
 //=============================================================================
