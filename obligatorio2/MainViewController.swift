@@ -106,7 +106,7 @@ class MainViewController:UIViewController,UICollectionViewDataSource, UICollecti
     }
     
     func changeSmallLabelTemperature(label:UILabel, temperature:String, unit:String){
-        changeLabelTemperature(label: label, originalMaxSize: CGFloat(24), temperature: temperature, unit: unit)
+        changeLabelTemperature(label: label, originalMaxSize: CGFloat(26), temperature: temperature, unit: unit)
     }
     
     func changeBigLabelTemperature(label:UILabel, temperature:String, unit:String){
