@@ -70,8 +70,16 @@ class MainViewController:UIViewController,UICollectionViewDataSource, UICollecti
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: cellCollectionViewIdentifier,
                                                       for: indexPath) as! DayWeatherCollectionViewCell
         
-        
+        cell.weatherIconLabelTopConstraint.constant = cell.weatherIconLabelTopConstraint.constant * relationHeight
+        cell.temperatureLabelTopConstraint.constant = cell.temperatureLabelTopConstraint.constant * relationHeight
         changeSmallLabelTemperature(label:cell.temperatureLabel, temperature:"10", unit:"°C")
+        cell.weatherIconLabel.font = UIFont(name: cell.weatherIconLabel.font.fontName , size: cell.weatherIconLabel.font.pointSize * relationHeight)
+        
+        var multiplier:CGFloat = 1.0
+        if (Screen.shared.screenHeight==480.0){//iphone4
+            multiplier = 1.2
+        }
+        cell.temperatureLabel.font = UIFont(name: cell.dayLabel.font.fontName , size: cell.dayLabel.font.pointSize * relationHeight * multiplier)
         return cell
     }
     
@@ -98,7 +106,7 @@ class MainViewController:UIViewController,UICollectionViewDataSource, UICollecti
     }
     
     func changeSmallLabelTemperature(label:UILabel, temperature:String, unit:String){
-        changeLabelTemperature(label: label, originalMaxSize: CGFloat(17), temperature: temperature, unit: unit)
+        changeLabelTemperature(label: label, originalMaxSize: CGFloat(24), temperature: temperature, unit: unit)
     }
     
     func changeBigLabelTemperature(label:UILabel, temperature:String, unit:String){

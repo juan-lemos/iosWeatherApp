@@ -86,8 +86,8 @@
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="10ºC" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cE8-GW-e4M">
-                                                    <rect key="frame" x="77.5" y="92" width="51" height="26.5"/>
-                                                    <fontDescription key="fontDescription" type="boldSystem" pointSize="22"/>
+                                                    <rect key="frame" x="77" y="92" width="53.5" height="29"/>
+                                                    <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="24"/>
                                                     <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
@@ -105,7 +105,9 @@
                                         <connections>
                                             <outlet property="dayLabel" destination="f7P-HB-l0b" id="L1Y-qW-frk"/>
                                             <outlet property="temperatureLabel" destination="cE8-GW-e4M" id="4cn-G9-qDx"/>
+                                            <outlet property="temperatureLabelTopConstraint" destination="c0i-dh-fNp" id="uUd-0M-7Mv"/>
                                             <outlet property="weatherIconLabel" destination="Sfm-0V-O4L" id="2au-SJ-poC"/>
+                                            <outlet property="weatherIconLabelTopConstraint" destination="bgY-NI-lT8" id="3hL-xq-gq9"/>
                                         </connections>
                                     </collectionViewCell>
                                 </cells>
