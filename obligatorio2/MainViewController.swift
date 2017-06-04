@@ -13,7 +13,7 @@ class MainViewController:UIViewController,UICollectionViewDataSource, UICollecti
     
     
 //=============================================================================
-    //MARK: -elements
+    //MARK: -view elements
     @IBOutlet weak var cityLabel: UILabel!
     @IBOutlet weak var settingsButton: UIButton!
     @IBOutlet weak var weatherIconLabel: UILabel!
