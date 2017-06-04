@@ -34,7 +34,8 @@ class MainViewController:UIViewController,UICollectionViewDataSource, UICollecti
         relationWidth = Screen.shared.relationWidth
         relationHeight = Screen.shared.relationHeight
         modifyConstraintsAndFontsSizes()
-        changeBigLabelTemperature(label: temperatureLabel, temperature: "7", unit: "°C")
+        changeBigLabelTemperature(label: temperatureLabel, temperature: "7", unit: TemperatureUnit.C)
+        
         
     }
     
@@ -74,7 +75,7 @@ class MainViewController:UIViewController,UICollectionViewDataSource, UICollecti
         
         cell.weatherIconLabelTopConstraint.constant = cell.weatherIconLabelTopConstraint.constant * relationHeight
         cell.temperatureLabelTopConstraint.constant = cell.temperatureLabelTopConstraint.constant * relationHeight
-        changeSmallLabelTemperature(label:cell.temperatureLabel, temperature:"10", unit:"°C")
+        changeSmallLabelTemperature(label:cell.temperatureLabel, temperature:"10", unit:TemperatureUnit.C)
         cell.weatherIconLabel.font = UIFont(name: cell.weatherIconLabel.font.fontName , size: cell.weatherIconLabel.font.pointSize * relationHeight)
         
         var multiplier:CGFloat = 1.0
@@ -107,20 +108,20 @@ class MainViewController:UIViewController,UICollectionViewDataSource, UICollecti
         temperatureLabel.font = UIFont(name: temperatureLabel.font.fontName , size: temperatureLabel.font.pointSize * relationHeight)
     }
     
-    func changeSmallLabelTemperature(label:UILabel, temperature:String, unit:String){
+    func changeSmallLabelTemperature(label:UILabel, temperature:String, unit:TemperatureUnit){
         changeLabelTemperature(label: label, originalMaxSize: CGFloat(26), temperature: temperature, unit: unit)
     }
     
-    func changeBigLabelTemperature(label:UILabel, temperature:String, unit:String){
+    func changeBigLabelTemperature(label:UILabel, temperature:String, unit:TemperatureUnit){
         changeLabelTemperature(label: label, originalMaxSize: CGFloat(68), temperature: temperature, unit: unit)
     }
     
-    func changeLabelTemperature(label:UILabel, originalMaxSize:CGFloat, temperature:String, unit:String){
+    func changeLabelTemperature(label:UILabel, originalMaxSize:CGFloat, temperature:String, unit:TemperatureUnit){
         let bigFontSize = originalMaxSize * relationHeight
         let smallFontSize = bigFontSize * Screen.shared.smallBigFontTemperatureRelation
-        let myMutableString = NSMutableAttributedString(string: "\(temperature)\(unit)")
+        let myMutableString = NSMutableAttributedString(string: "\(temperature)\(unit.rawValue)")
         myMutableString.addAttributes([NSFontAttributeName:UIFont(name: "HelveticaNeue-Medium", size: bigFontSize)!], range: NSRange(location:0,length:"\(temperature)".characters.count))
-        myMutableString.addAttributes([NSFontAttributeName:UIFont(name: "HelveticaNeue-Medium", size: smallFontSize)!], range: NSRange(location:"\(temperature)".characters.count,length:unit.characters.count))
+        myMutableString.addAttributes([NSFontAttributeName:UIFont(name: "HelveticaNeue-Medium", size: smallFontSize)!], range: NSRange(location:"\(temperature)".characters.count,length:unit.rawValue.characters.count))
         label.attributedText = myMutableString
     }
 }
