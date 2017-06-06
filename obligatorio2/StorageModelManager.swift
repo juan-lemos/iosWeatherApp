@@ -1,5 +1,5 @@
 import UIKit
-
+//https://stackoverflow.com/questions/29986957/save-custom-objects-into-nsuserdefaults
 
 class ModelManager  {
     
@@ -26,4 +26,6 @@ class ModelManager  {
             return [[String:String]]()
         }
     }
+    
+    
 }
