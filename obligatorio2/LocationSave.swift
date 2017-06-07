@@ -1,7 +1,16 @@
-import Foundation
+import CoreLocation
+import SwiftLocation
 
-struct LocationSave{
-    var location:Location
-    var date:Date
+class LocationSave{
+    var actualLocation = true
+    var latitud:Double?
+    var longitud:Double?
+    
+    func getActualLocation(){
+        Location.
+//        Location
+        
+//        Location.
+    }
     
 }
