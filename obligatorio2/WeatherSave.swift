@@ -1,7 +1,8 @@
 import Foundation
 
-struct WeatherSave{
-
+class WeatherSave{
+    
+    class 
     
     
     

@@ -11,6 +11,7 @@ class LocationSave{
     var actualLocation = true
     var latitud:Double = 0
     var longitude:Double = 0
+    var city:String = "..."
     
     func actualAndCallWeatherApi(){
         Location.getLocation(accuracy: .city, frequency: .oneShot,
@@ -28,10 +29,11 @@ class LocationSave{
         dic["actualLocation"] = "\(actualLocation)"
         dic["latitud"] = "\(latitud)"
         dic["longitude"] = "\(longitude)"
+        dic["city"] = city
         return dic
     }
     
-    func getModel(model : [String:String]){
+    func loadModel(model : [String:String]){
         if (model["actualLocation"] == "false"){
             actualLocation = false
         }else{
@@ -39,7 +41,7 @@ class LocationSave{
         }
         latitud = Double(model["latitud"]!)!
         longitude = Double(model["longitude"]!)!
-        
+        city = model["city"]!
     }
     
 }

@@ -1,6 +1,10 @@
-struct WeatherDay{
+class WeatherDay{
     var day:Day
     var icon:String
-    var temp:String
+    var temp:Int //
     var tempUnit:TemperatureUnit
+    
+    
+    
+    
 }
