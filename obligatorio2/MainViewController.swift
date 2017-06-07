@@ -73,16 +73,17 @@ class MainViewController:UIViewController,UICollectionViewDataSource, UICollecti
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: cellCollectionViewIdentifier,
                                                       for: indexPath) as! DayWeatherCollectionViewCell
         
+        
         cell.weatherIconLabelTopConstraint.constant = cell.weatherIconLabelTopConstraint.constant * relationHeight
         cell.temperatureLabelTopConstraint.constant = cell.temperatureLabelTopConstraint.constant * relationHeight
         changeSmallLabelTemperature(label:cell.temperatureLabel, temperature:"10", unit:TemperatureUnit.C)
-        cell.weatherIconLabel.font = UIFont(name: cell.weatherIconLabel.font.fontName , size: cell.weatherIconLabel.font.pointSize * relationHeight)
+        cell.weatherIconLabel.font = UIFont(name: cell.weatherIconLabel.font.fontName , size: 39 * relationHeight)
         
         var multiplier:CGFloat = 1.0
         if (Screen.shared.screenHeight==480.0){//iphone4
             multiplier = 1.2
         }
-        cell.temperatureLabel.font = UIFont(name: cell.dayLabel.font.fontName , size: cell.dayLabel.font.pointSize * relationHeight * multiplier)
+        cell.temperatureLabel.font = UIFont(name: cell.dayLabel.font.fontName , size: 26 * relationHeight * multiplier)
         return cell
     }
     
@@ -104,8 +105,8 @@ class MainViewController:UIViewController,UICollectionViewDataSource, UICollecti
             multiplier = 1.2
         }
         cityLabel.font = UIFont(name: cityLabel.font.fontName , size: cityLabel.font.pointSize * relationHeight * multiplier)
-        weatherIconLabel.font = UIFont(name: weatherIconLabel.font.fontName , size: weatherIconLabel.font.pointSize * relationHeight)
-        temperatureLabel.font = UIFont(name: temperatureLabel.font.fontName , size: temperatureLabel.font.pointSize * relationHeight)
+        weatherIconLabel.font = UIFont(name: weatherIconLabel.font.fontName , size: 144 * relationHeight)
+        temperatureLabel.font = UIFont(name: temperatureLabel.font.fontName , size: 35 * relationHeight)
     }
     
     func changeSmallLabelTemperature(label:UILabel, temperature:String, unit:TemperatureUnit){
@@ -113,7 +114,7 @@ class MainViewController:UIViewController,UICollectionViewDataSource, UICollecti
     }
     
     func changeBigLabelTemperature(label:UILabel, temperature:String, unit:TemperatureUnit){
-        changeLabelTemperature(label: label, originalMaxSize: CGFloat(68), temperature: temperature, unit: unit)
+        changeLabelTemperature(label: label, originalMaxSize: CGFloat(62), temperature: temperature, unit: unit)
     }
     
     func changeLabelTemperature(label:UILabel, originalMaxSize:CGFloat, temperature:String, unit:TemperatureUnit){

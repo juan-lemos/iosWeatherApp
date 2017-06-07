@@ -11,7 +11,7 @@ class Screen {
     static let shared = Screen()
     private init(){
         let screenSize = UIScreen.main.bounds
-        let originalWidth:CGFloat = 375.0
+        let originalWidth:CGFloat = 375.0 //iphone 7 sizes
         let originalHeigth:CGFloat = 667.0
         self.width = screenSize.width
         self.height = screenSize.height
