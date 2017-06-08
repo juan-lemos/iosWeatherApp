@@ -15,6 +15,7 @@
 		0E5B13961EDF9ECA00BDCD07 /* Media.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0E5B13951EDF9ECA00BDCD07 /* Media.xcassets */; };
 		0E5B139C1EDFA61C00BDCD07 /* WeatherIcon.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E5B139B1EDFA61C00BDCD07 /* WeatherIcon.swift */; };
 		0F0D5347D639FB85EB60B2FE /* Pods_obligatorio2.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8B40E852F6651BDEF8833EA7 /* Pods_obligatorio2.framework */; };
+		8EDBD2DF1EE8C212009BEE40 /* WeatherApi.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EDBD2DE1EE8C212009BEE40 /* WeatherApi.swift */; };
 		EB0D441C1EE28D5C00E6148C /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB0D441B1EE28D5C00E6148C /* MainViewController.swift */; };
 		EB0D441E1EE28D7000E6148C /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB0D441D1EE28D7000E6148C /* SettingsViewController.swift */; };
 		EB0D44231EE28EB600E6148C /* ApisKeys.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB0D44221EE28EB600E6148C /* ApisKeys.swift */; };
@@ -45,6 +46,7 @@
 		0E5B139B1EDFA61C00BDCD07 /* WeatherIcon.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WeatherIcon.swift; sourceTree = "<group>"; };
 		7E1957B2EDCC6D443DCD3D68 /* Pods-obligatorio2.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-obligatorio2.release.xcconfig"; path = "Pods/Target Support Files/Pods-obligatorio2/Pods-obligatorio2.release.xcconfig"; sourceTree = "<group>"; };
 		8B40E852F6651BDEF8833EA7 /* Pods_obligatorio2.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_obligatorio2.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		8EDBD2DE1EE8C212009BEE40 /* WeatherApi.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WeatherApi.swift; sourceTree = "<group>"; };
 		AA4BE9C0FFE25E8D8B8FF088 /* Pods-obligatorio2.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-obligatorio2.debug.xcconfig"; path = "Pods/Target Support Files/Pods-obligatorio2/Pods-obligatorio2.debug.xcconfig"; sourceTree = "<group>"; };
 		EB0D441B1EE28D5C00E6148C /* MainViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
 		EB0D441D1EE28D7000E6148C /* SettingsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
@@ -95,6 +97,7 @@
 		0E5B13751EDF8A0300BDCD07 /* obligatorio2 */ = {
 			isa = PBXGroup;
 			children = (
+				8EDBD2DD1EE8C1F8009BEE40 /* API */,
 				EB0D441F1EE28D7A00E6148C /* MainStoryboard */,
 				EB72B8A51EDFCFB8000B5323 /* Utils */,
 				0E5B139A1EDFA5E200BDCD07 /* resources */,
@@ -123,6 +126,14 @@
 				8B40E852F6651BDEF8833EA7 /* Pods_obligatorio2.framework */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		8EDBD2DD1EE8C1F8009BEE40 /* API */ = {
+			isa = PBXGroup;
+			children = (
+				8EDBD2DE1EE8C212009BEE40 /* WeatherApi.swift */,
+			);
+			name = API;
 			sourceTree = "<group>";
 		};
 		8FD30DDC4F3E93F6806C9F83 /* Pods */ = {
@@ -349,6 +360,7 @@
 			files = (
 				EB9088891EE35D9600EF6A26 /* Screen.swift in Sources */,
 				EB3E4F991EE3B07E00F441A6 /* WeatherDay.swift in Sources */,
+				8EDBD2DF1EE8C212009BEE40 /* WeatherApi.swift in Sources */,
 				EB3E4F9E1EE4538A00F441A6 /* TemperatureUnit.swift in Sources */,
 				EB0D44681EE31CDC00E6148C /* DayWeatherCollectionViewCell.swift in Sources */,
 				EB79A3C21EE64175008BBE10 /* Date+Extension.swift in Sources */,
