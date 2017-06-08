@@ -27,7 +27,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="example_model_Main.png" translatesAutoresizingMaskIntoConstraints="NO" id="Hti-d2-lRB">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="defaultCityImage.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="Hti-d2-lRB">
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Montevideo" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="92e-L6-LaD">
@@ -344,7 +344,7 @@
     </scenes>
     <resources>
         <image name="btn-settings" width="32" height="33"/>
-        <image name="example_model_Main.png" width="282" height="501"/>
+        <image name="defaultCityImage.jpg" width="1800" height="1200"/>
         <image name="icn-location" width="29" height="29"/>
         <image name="icn-ruler" width="34" height="33"/>
     </resources>
