@@ -22,6 +22,8 @@
 		EB0D44661EE2FB6100E6148C /* Screen Shot 2017-06-03 at 11.12.21 AM.png in Resources */ = {isa = PBXBuildFile; fileRef = EB0D44651EE2FB6100E6148C /* Screen Shot 2017-06-03 at 11.12.21 AM.png */; };
 		EB0D44681EE31CDC00E6148C /* DayWeatherCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB0D44671EE31CDC00E6148C /* DayWeatherCollectionViewCell.swift */; };
 		EB31F1C41EE9911D00E76357 /* SettingsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB31F1C31EE9911D00E76357 /* SettingsTableViewController.swift */; };
+		EB31F1C61EE9B13600E76357 /* FlickrApi.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB31F1C51EE9B13600E76357 /* FlickrApi.swift */; };
+		EB31F1C81EE9B39D00E76357 /* FlickrApiResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB31F1C71EE9B39D00E76357 /* FlickrApiResponse.swift */; };
 		EB3E4F991EE3B07E00F441A6 /* WeatherDay.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB3E4F981EE3B07E00F441A6 /* WeatherDay.swift */; };
 		EB3E4F9B1EE3B0B600F441A6 /* Day.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB3E4F9A1EE3B0B600F441A6 /* Day.swift */; };
 		EB3E4F9E1EE4538A00F441A6 /* TemperatureUnit.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB3E4F9D1EE4538A00F441A6 /* TemperatureUnit.swift */; };
@@ -54,6 +56,8 @@
 		EB0D44651EE2FB6100E6148C /* Screen Shot 2017-06-03 at 11.12.21 AM.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Screen Shot 2017-06-03 at 11.12.21 AM.png"; sourceTree = "<group>"; };
 		EB0D44671EE31CDC00E6148C /* DayWeatherCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DayWeatherCollectionViewCell.swift; sourceTree = "<group>"; };
 		EB31F1C31EE9911D00E76357 /* SettingsTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingsTableViewController.swift; sourceTree = "<group>"; };
+		EB31F1C51EE9B13600E76357 /* FlickrApi.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FlickrApi.swift; sourceTree = "<group>"; };
+		EB31F1C71EE9B39D00E76357 /* FlickrApiResponse.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FlickrApiResponse.swift; sourceTree = "<group>"; };
 		EB3E4F981EE3B07E00F441A6 /* WeatherDay.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WeatherDay.swift; sourceTree = "<group>"; };
 		EB3E4F9A1EE3B0B600F441A6 /* Day.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Day.swift; sourceTree = "<group>"; };
 		EB3E4F9D1EE4538A00F441A6 /* TemperatureUnit.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TemperatureUnit.swift; sourceTree = "<group>"; };
@@ -131,6 +135,7 @@
 			isa = PBXGroup;
 			children = (
 				8EDBD2DE1EE8C212009BEE40 /* WeatherApi.swift */,
+				EB31F1C91EE9B3B300E76357 /* FlickrApi */,
 			);
 			name = API;
 			sourceTree = "<group>";
@@ -170,6 +175,15 @@
 				EB0D44671EE31CDC00E6148C /* DayWeatherCollectionViewCell.swift */,
 			);
 			name = MainViewController;
+			sourceTree = "<group>";
+		};
+		EB31F1C91EE9B3B300E76357 /* FlickrApi */ = {
+			isa = PBXGroup;
+			children = (
+				EB31F1C51EE9B13600E76357 /* FlickrApi.swift */,
+				EB31F1C71EE9B39D00E76357 /* FlickrApiResponse.swift */,
+			);
+			name = FlickrApi;
 			sourceTree = "<group>";
 		};
 		EB3E4F9C1EE3B22B00F441A6 /* Model */ = {
@@ -355,6 +369,7 @@
 				8EDBD2DF1EE8C212009BEE40 /* WeatherApi.swift in Sources */,
 				EB3E4F9E1EE4538A00F441A6 /* TemperatureUnit.swift in Sources */,
 				EB0D44681EE31CDC00E6148C /* DayWeatherCollectionViewCell.swift in Sources */,
+				EB31F1C81EE9B39D00E76357 /* FlickrApiResponse.swift in Sources */,
 				EB79A3BB1EE63B40008BBE10 /* StorageModelManager.swift in Sources */,
 				0E5B139C1EDFA61C00BDCD07 /* WeatherIcon.swift in Sources */,
 				EB79A3BD1EE63CE0008BBE10 /* LocationSave.swift in Sources */,
@@ -365,6 +380,7 @@
 				EB79A3C01EE640FF008BBE10 /* WeatherSave.swift in Sources */,
 				EB3E4F9B1EE3B0B600F441A6 /* Day.swift in Sources */,
 				EB0D441C1EE28D5C00E6148C /* MainViewController.swift in Sources */,
+				EB31F1C61EE9B13600E76357 /* FlickrApi.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

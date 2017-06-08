@@ -60,9 +60,11 @@ class MainViewController:UIViewController,UICollectionViewDataSource, UICollecti
         modifyConstraintsAndFontsSizes()
         changeBigLabelTemperature(label: temperatureLabel, temperature: "7", unit: TemperatureUnit.C)
         
-        WeatherAPI.shared.getWeather(lat: -34.90, lon: -56.16, days: 7) { (_, _) in
+//        WeatherAPI.shared.getWeather(lat: -34.90, lon: -56.16, days: 7) { (_, _) in
+//        }
+        FlickrAPI.shared.getWeather { (ds, ee) in
+            
         }
-        
         
     }
     
