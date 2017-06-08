@@ -39,7 +39,7 @@ class WeatherAPI {
                     
                     //print(aa)
                     let weather = Mapper<WeatherDay>().mapArray(JSONObject:aa.rawValue)
-                    print ("ds")
+//                    print ("ds")
                 }
                 
                 //print(json.dictionary!["list"])
@@ -48,9 +48,9 @@ class WeatherAPI {
               
                 //                let universities = Mapper<University>().mapArray(JSONObject: json.rawValue)
                 //                onCompletion(universities, nil)
-                print("hola")
+//                print("hola")
             case .failure(let _):
-                print("hla")
+                print("ERROR")
                 
                 
                 //                onCompletion(nil, error)

@@ -21,6 +21,7 @@
 		EB0D44231EE28EB600E6148C /* ApisKeys.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB0D44221EE28EB600E6148C /* ApisKeys.swift */; };
 		EB0D44661EE2FB6100E6148C /* Screen Shot 2017-06-03 at 11.12.21 AM.png in Resources */ = {isa = PBXBuildFile; fileRef = EB0D44651EE2FB6100E6148C /* Screen Shot 2017-06-03 at 11.12.21 AM.png */; };
 		EB0D44681EE31CDC00E6148C /* DayWeatherCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB0D44671EE31CDC00E6148C /* DayWeatherCollectionViewCell.swift */; };
+		EB31F1C41EE9911D00E76357 /* SettingsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB31F1C31EE9911D00E76357 /* SettingsTableViewController.swift */; };
 		EB3E4F991EE3B07E00F441A6 /* WeatherDay.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB3E4F981EE3B07E00F441A6 /* WeatherDay.swift */; };
 		EB3E4F9B1EE3B0B600F441A6 /* Day.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB3E4F9A1EE3B0B600F441A6 /* Day.swift */; };
 		EB3E4F9E1EE4538A00F441A6 /* TemperatureUnit.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB3E4F9D1EE4538A00F441A6 /* TemperatureUnit.swift */; };
@@ -52,6 +53,7 @@
 		EB0D44221EE28EB600E6148C /* ApisKeys.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ApisKeys.swift; sourceTree = "<group>"; };
 		EB0D44651EE2FB6100E6148C /* Screen Shot 2017-06-03 at 11.12.21 AM.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Screen Shot 2017-06-03 at 11.12.21 AM.png"; sourceTree = "<group>"; };
 		EB0D44671EE31CDC00E6148C /* DayWeatherCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DayWeatherCollectionViewCell.swift; sourceTree = "<group>"; };
+		EB31F1C31EE9911D00E76357 /* SettingsTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingsTableViewController.swift; sourceTree = "<group>"; };
 		EB3E4F981EE3B07E00F441A6 /* WeatherDay.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WeatherDay.swift; sourceTree = "<group>"; };
 		EB3E4F9A1EE3B0B600F441A6 /* Day.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Day.swift; sourceTree = "<group>"; };
 		EB3E4F9D1EE4538A00F441A6 /* TemperatureUnit.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TemperatureUnit.swift; sourceTree = "<group>"; };
@@ -156,6 +158,7 @@
 			isa = PBXGroup;
 			children = (
 				EB0D441D1EE28D7000E6148C /* SettingsViewController.swift */,
+				EB31F1C31EE9911D00E76357 /* SettingsTableViewController.swift */,
 			);
 			name = SettingsViewController;
 			sourceTree = "<group>";
@@ -358,6 +361,7 @@
 				0E5B13771EDF8A0300BDCD07 /* AppDelegate.swift in Sources */,
 				EB0D441E1EE28D7000E6148C /* SettingsViewController.swift in Sources */,
 				EB0D44231EE28EB600E6148C /* ApisKeys.swift in Sources */,
+				EB31F1C41EE9911D00E76357 /* SettingsTableViewController.swift in Sources */,
 				EB79A3C01EE640FF008BBE10 /* WeatherSave.swift in Sources */,
 				EB3E4F9B1EE3B0B600F441A6 /* Day.swift in Sources */,
 				EB0D441C1EE28D5C00E6148C /* MainViewController.swift in Sources */,

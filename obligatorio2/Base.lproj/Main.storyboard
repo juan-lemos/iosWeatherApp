@@ -198,7 +198,7 @@
                                     <constraint firstAttribute="height" constant="80" id="OKU-I8-5b1"/>
                                 </constraints>
                                 <connections>
-                                    <segue destination="nJM-p9-lmk" kind="embed" id="96j-kL-gyy"/>
+                                    <segue destination="nJM-p9-lmk" kind="embed" identifier="embedTableView" id="96j-kL-gyy"/>
                                 </connections>
                             </containerView>
                             <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="1Sq-LL-bTL">
@@ -227,10 +227,10 @@
             </objects>
             <point key="canvasLocation" x="160.80000000000001" y="123.68815592203899"/>
         </scene>
-        <!--Table View Controller-->
+        <!--Settings Table View Controller-->
         <scene sceneID="GRl-qX-UGZ">
             <objects>
-                <tableViewController id="nJM-p9-lmk" sceneMemberID="viewController">
+                <tableViewController id="nJM-p9-lmk" customClass="SettingsTableViewController" customModule="obligatorio2" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" scrollEnabled="NO" dataMode="static" style="plain" allowsSelection="NO" rowHeight="40" sectionHeaderHeight="28" sectionFooterHeight="28" id="UoV-Ad-DXq">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="80"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -255,6 +255,9 @@
                                                         <segment title="C°"/>
                                                         <segment title="F°"/>
                                                     </segments>
+                                                    <connections>
+                                                        <action selector="temperatureUnitSwitchAction:" destination="nJM-p9-lmk" eventType="valueChanged" id="kAj-Yh-fxj"/>
+                                                    </connections>
                                                 </segmentedControl>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Unidades" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Tjt-d8-vSk">
                                                     <rect key="frame" x="60" y="9" width="73" height="21"/>
@@ -304,6 +307,9 @@
                                                 </label>
                                                 <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="9lv-41-9gy">
                                                     <rect key="frame" x="316" y="4" width="51" height="31"/>
+                                                    <connections>
+                                                        <action selector="locationSwitchAction:" destination="nJM-p9-lmk" eventType="valueChanged" id="KBO-Xr-HfJ"/>
+                                                    </connections>
                                                 </switch>
                                             </subviews>
                                             <constraints>
@@ -326,6 +332,10 @@
                     </tableView>
                     <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
                     <size key="freeformSize" width="375" height="80"/>
+                    <connections>
+                        <outlet property="actualLocationSwitch" destination="9lv-41-9gy" id="TtN-Z5-wZr"/>
+                        <outlet property="temperatureUnitsSwitch" destination="fJe-gu-aQI" id="tkd-8x-APk"/>
+                    </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="CkH-r8-V6E" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

@@ -34,6 +34,15 @@ class LocationSave{
     }
     
     
+    func getCoordinates()->CLLocationCoordinate2D{
+        return CLLocationCoordinate2D(latitude: latitud, longitude: longitude)
+    }
+    
+    func setCoordinates( coordinates:CLLocationCoordinate2D ){
+        self.latitud = coordinates.latitude
+        self.longitude  = coordinates.longitude
+    }
+    
     func saveModel() -> [String:String]{
         var dic = [String: String]()
         dic["actualLocation"] = "\(actualLocation)"
