@@ -12,8 +12,5 @@ class ModelManager  {
         if let locationSettings = UserDefaults.standard.object(forKey: "locationSettings") as? [String : String] {
             LocationSave.shared.loadModel(model :locationSettings)
         }
-        else{
-            
-        }
     }
 }

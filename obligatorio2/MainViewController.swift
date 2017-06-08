@@ -1,4 +1,5 @@
 import UIKit
+import EZLoadingActivity
 
 class MainViewController:UIViewController,UICollectionViewDataSource, UICollectionViewDelegateFlowLayout{
 //=============================================================================
@@ -41,6 +42,7 @@ class MainViewController:UIViewController,UICollectionViewDataSource, UICollecti
         
         
     }
+    
     
 //=============================================================================
     //MARK: -UICollectionViewDelegateFlowLayout
