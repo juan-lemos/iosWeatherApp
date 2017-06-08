@@ -22,6 +22,29 @@ class MainViewController:UIViewController,UICollectionViewDataSource, UICollecti
     @IBOutlet weak var backgroundViewImage: UIImageView!
     
 //=============================================================================
+    //MARK: -constants constraints
+    let cityLabelTopConstraintConstant: CGFloat = 20
+    let buttonTopConstraintConstant: CGFloat = 15
+    let buttonLeadingConstraintConstant: CGFloat = 4
+    let buttonTrailingConstraintConstant: CGFloat = 25
+    let buttonWidthConstraintConstant: CGFloat = 32
+    let buttonHeightConstraintConstant: CGFloat = 33
+    let collectionViewHeightConstant: CGFloat = 158
+    
+    let cellWeatherIconLabelTopConstraintConstant : CGFloat = 4
+    let cellTemperatureLabelTopConstraintConstant : CGFloat = 3
+
+//=============================================================================
+    //MARK: -constants fonts
+    let cityLabelFontSize : CGFloat = 35
+    let weatherIconLabelFontSize : CGFloat = 144
+    let temperatureLabelFontSize : CGFloat = 62
+    
+    let cellDayLabelFontSize : CGFloat = 17
+    let cellWeatherIconLabelFontSize : CGFloat = 39
+    let cellTemperatureLabelFontSize : CGFloat = 26
+    
+//=============================================================================
     //MARK: -variables of Controller
     var relationWidth:CGFloat!
     var relationHeight:CGFloat!
@@ -79,16 +102,16 @@ class MainViewController:UIViewController,UICollectionViewDataSource, UICollecti
                                                       for: indexPath) as! DayWeatherCollectionViewCell
         
         
-        cell.weatherIconLabelTopConstraint.constant = cell.weatherIconLabelTopConstraint.constant * relationHeight
-        cell.temperatureLabelTopConstraint.constant = cell.temperatureLabelTopConstraint.constant * relationHeight
+        cell.weatherIconLabelTopConstraint.constant = cellWeatherIconLabelTopConstraintConstant * relationHeight
+        cell.temperatureLabelTopConstraint.constant = cellTemperatureLabelTopConstraintConstant * relationHeight
         changeSmallLabelTemperature(label:cell.temperatureLabel, temperature:"10", unit:TemperatureUnit.C)
-        cell.weatherIconLabel.font = UIFont(name: cell.weatherIconLabel.font.fontName , size: 39 * relationHeight)
+        cell.weatherIconLabel.font = UIFont(name: cell.weatherIconLabel.font.fontName , size: cellWeatherIconLabelFontSize * relationHeight)
         
         var multiplier:CGFloat = 1.0
-        if (Screen.shared.screenHeight==480.0){//iphone4
+        if (Screen.shared.screenHeight==Screen.shared.iphone4sScreenHeight){//iphone4
             multiplier = 1.2
         }
-        cell.temperatureLabel.font = UIFont(name: cell.dayLabel.font.fontName , size: 26 * relationHeight * multiplier)
+        cell.dayLabel.font = UIFont(name: cell.dayLabel.font.fontName , size: cellDayLabelFontSize * relationHeight * multiplier)
         return cell
     }
     
@@ -96,30 +119,29 @@ class MainViewController:UIViewController,UICollectionViewDataSource, UICollecti
 //=============================================================================
     //MARK: -Change UI methods
     func modifyConstraintsAndFontsSizes(){
-        cityLabelTopConstraint.constant = cityLabelTopConstraint.constant * relationHeight
-        buttonTopConstraint.constant = buttonTopConstraint.constant * relationHeight
-        buttonLeadingConstraint.constant = buttonLeadingConstraint.constant * relationWidth
-        buttonTrailingConstraint.constant = buttonTrailingConstraint.constant * relationWidth
-        buttonWidthConstraint.constant = buttonWidthConstraint.constant * relationWidth
-        buttonHeightConstraint.constant = buttonHeightConstraint.constant * relationHeight
-        collectionViewHeight.constant = collectionViewHeight.constant * relationHeight
+        cityLabelTopConstraint.constant = cityLabelTopConstraintConstant * relationHeight
+        buttonTopConstraint.constant = buttonTopConstraintConstant * relationHeight
+        buttonLeadingConstraint.constant = buttonLeadingConstraintConstant * relationWidth
+        buttonTrailingConstraint.constant = buttonTrailingConstraintConstant * relationWidth
+        buttonWidthConstraint.constant = buttonWidthConstraintConstant * relationWidth
+        buttonHeightConstraint.constant = buttonHeightConstraintConstant * relationHeight
+        collectionViewHeight.constant = collectionViewHeightConstant * relationHeight
         
         //relative to height because we are using always portrait
         var multiplier:CGFloat = 1.0
-        if (Screen.shared.screenHeight==480.0){//iphone4
+        if (Screen.shared.screenHeight==Screen.shared.iphone4sScreenHeight){//iphone4
             multiplier = 1.2
         }
-        cityLabel.font = UIFont(name: cityLabel.font.fontName , size: cityLabel.font.pointSize * relationHeight * multiplier)
-        weatherIconLabel.font = UIFont(name: weatherIconLabel.font.fontName , size: 144 * relationHeight)
-        temperatureLabel.font = UIFont(name: temperatureLabel.font.fontName , size: 35 * relationHeight)
+        cityLabel.font = UIFont(name: cityLabel.font.fontName , size: cityLabelFontSize * relationHeight * multiplier)
+        weatherIconLabel.font = UIFont(name: weatherIconLabel.font.fontName , size: weatherIconLabelFontSize * relationHeight)
     }
     
     func changeSmallLabelTemperature(label:UILabel, temperature:String, unit:TemperatureUnit){
-        changeLabelTemperature(label: label, originalMaxSize: CGFloat(26), temperature: temperature, unit: unit)
+        changeLabelTemperature(label: label, originalMaxSize: cellTemperatureLabelFontSize, temperature: temperature, unit: unit)
     }
     
     func changeBigLabelTemperature(label:UILabel, temperature:String, unit:TemperatureUnit){
-        changeLabelTemperature(label: label, originalMaxSize: CGFloat(62), temperature: temperature, unit: unit)
+        changeLabelTemperature(label: label, originalMaxSize: temperatureLabelFontSize, temperature: temperature, unit: unit)
     }
     
     func changeLabelTemperature(label:UILabel, originalMaxSize:CGFloat, temperature:String, unit:TemperatureUnit){

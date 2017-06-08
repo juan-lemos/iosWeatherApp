@@ -1,7 +1,8 @@
 import UIKit
-import EZLoadingActivity
+import MapKit
 class SettingsViewController:UIViewController{
 
+    @IBOutlet weak var mapView: MKMapView!
     @IBAction func cacelarButtonAction(_ sender: Any) {
         self.dismiss(animated: true, completion: nil)
     }
@@ -9,4 +10,8 @@ class SettingsViewController:UIViewController{
     @IBAction func guardarButtonAction(_ sender: Any) {
         
     }
+    
+    
+    
+    
 }

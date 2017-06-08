@@ -45,11 +45,14 @@ class Screen {
         }
     }
     
-    private let internalSmallBigFontTemperatureRelation:CGFloat=40/69
+    private let internalSmallBigFontTemperatureRelation:CGFloat=40/62
     var smallBigFontTemperatureRelation:CGFloat{get{
         return internalSmallBigFontTemperatureRelation}
     }
     
-    
+    private let internalIphone4sScreenHeight:CGFloat=480
+    var iphone4sScreenHeight:CGFloat{get{
+        return internalIphone4sScreenHeight}
+    }
     
 }
