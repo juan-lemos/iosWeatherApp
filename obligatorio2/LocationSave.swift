@@ -29,9 +29,7 @@ class LocationSave{
                         self.city = "\(city)"
                     }
                 })
-            
         }) { (locationRequest, location, error) -> (Void) in
-            
         }
     }
     

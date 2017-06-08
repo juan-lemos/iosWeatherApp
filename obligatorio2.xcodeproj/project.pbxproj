@@ -28,7 +28,6 @@
 		EB79A3BB1EE63B40008BBE10 /* StorageModelManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB79A3BA1EE63B40008BBE10 /* StorageModelManager.swift */; };
 		EB79A3BD1EE63CE0008BBE10 /* LocationSave.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB79A3BC1EE63CE0008BBE10 /* LocationSave.swift */; };
 		EB79A3C01EE640FF008BBE10 /* WeatherSave.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB79A3BF1EE640FF008BBE10 /* WeatherSave.swift */; };
-		EB79A3C21EE64175008BBE10 /* Date+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB79A3C11EE64175008BBE10 /* Date+Extension.swift */; };
 		EB9088891EE35D9600EF6A26 /* Screen.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB9088881EE35D9600EF6A26 /* Screen.swift */; };
 /* End PBXBuildFile section */
 
@@ -58,7 +57,6 @@
 		EB79A3BA1EE63B40008BBE10 /* StorageModelManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StorageModelManager.swift; sourceTree = "<group>"; };
 		EB79A3BC1EE63CE0008BBE10 /* LocationSave.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LocationSave.swift; sourceTree = "<group>"; };
 		EB79A3BF1EE640FF008BBE10 /* WeatherSave.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WeatherSave.swift; sourceTree = "<group>"; };
-		EB79A3C11EE64175008BBE10 /* Date+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Date+Extension.swift"; sourceTree = "<group>"; };
 		EB9088881EE35D9600EF6A26 /* Screen.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Screen.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -100,7 +98,6 @@
 				0E5B139A1EDFA5E200BDCD07 /* resources */,
 				0E5B13761EDF8A0300BDCD07 /* AppDelegate.swift */,
 				EB3E4F9C1EE3B22B00F441A6 /* Model */,
-				EB79A3C31EE64180008BBE10 /* Extension */,
 				0E5B13821EDF8A0300BDCD07 /* Info.plist */,
 				0E5B137F1EDF8A0300BDCD07 /* LaunchScreen.storyboard */,
 			);
@@ -209,14 +206,6 @@
 				EB79A3BF1EE640FF008BBE10 /* WeatherSave.swift */,
 			);
 			name = Storage;
-			sourceTree = "<group>";
-		};
-		EB79A3C31EE64180008BBE10 /* Extension */ = {
-			isa = PBXGroup;
-			children = (
-				EB79A3C11EE64175008BBE10 /* Date+Extension.swift */,
-			);
-			name = Extension;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -351,7 +340,6 @@
 				EB3E4F991EE3B07E00F441A6 /* WeatherDay.swift in Sources */,
 				EB3E4F9E1EE4538A00F441A6 /* TemperatureUnit.swift in Sources */,
 				EB0D44681EE31CDC00E6148C /* DayWeatherCollectionViewCell.swift in Sources */,
-				EB79A3C21EE64175008BBE10 /* Date+Extension.swift in Sources */,
 				EB79A3BB1EE63B40008BBE10 /* StorageModelManager.swift in Sources */,
 				0E5B139C1EDFA61C00BDCD07 /* WeatherIcon.swift in Sources */,
 				EB79A3BD1EE63CE0008BBE10 /* LocationSave.swift in Sources */,
