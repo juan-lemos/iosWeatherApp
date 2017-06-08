@@ -8,4 +8,5 @@ target 'obligatorio2' do
     pod 'ObjectMapper', '2.2.7'
     pod 'SwiftyJSON', '3.1.4'
     pod 'SwiftLocation', '2.0.7'
+    pod 'EZLoadingActivity' , '1.01'
 end

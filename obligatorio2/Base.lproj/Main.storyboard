@@ -184,7 +184,11 @@
                                                 <action selector="cacelarButtonAction:" destination="BYZ-38-t0r" id="i0b-Yt-YDw"/>
                                             </connections>
                                         </barButtonItem>
-                                        <barButtonItem key="rightBarButtonItem" title="Guardar" id="haH-yk-gFf"/>
+                                        <barButtonItem key="rightBarButtonItem" title="Guardar" id="haH-yk-gFf">
+                                            <connections>
+                                                <action selector="guardarButtonAction:" destination="BYZ-38-t0r" id="YPE-RR-gEd"/>
+                                            </connections>
+                                        </barButtonItem>
                                     </navigationItem>
                                 </items>
                             </navigationBar>
@@ -250,7 +254,7 @@
                                                     </segments>
                                                 </segmentedControl>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Unidades" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Tjt-d8-vSk">
-                                                    <rect key="frame" x="60" y="10" width="73" height="21"/>
+                                                    <rect key="frame" x="60" y="9" width="73" height="21"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
@@ -296,7 +300,7 @@
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="9lv-41-9gy">
-                                                    <rect key="frame" x="316" y="5" width="51" height="31"/>
+                                                    <rect key="frame" x="316" y="4" width="51" height="31"/>
                                                 </switch>
                                             </subviews>
                                             <constraints>

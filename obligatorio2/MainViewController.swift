@@ -1,4 +1,5 @@
 import UIKit
+import EZLoadingActivity
 
 class MainViewController:UIViewController,UICollectionViewDataSource, UICollectionViewDelegateFlowLayout{
 //=============================================================================
@@ -35,9 +36,14 @@ class MainViewController:UIViewController,UICollectionViewDataSource, UICollecti
         relationHeight = Screen.shared.relationHeight
         modifyConstraintsAndFontsSizes()
         changeBigLabelTemperature(label: temperatureLabel, temperature: "7", unit: TemperatureUnit.C)
-        
+        LocationSave.shared.actualAndCallWeatherApi()
+    }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
         
     }
+    
     
 //=============================================================================
     //MARK: -UICollectionViewDelegateFlowLayout

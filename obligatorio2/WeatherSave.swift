@@ -2,9 +2,10 @@ import Foundation
 
 class WeatherSave{
     
-    class 
+    var today:WeatherDay?
+    var otherDays:[WeatherDay]?
     
     
     
-
 }
+    

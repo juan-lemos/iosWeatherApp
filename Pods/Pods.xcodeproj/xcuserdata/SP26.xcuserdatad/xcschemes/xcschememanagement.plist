@@ -9,6 +9,11 @@
 			<key>isShown</key>
 			<false/>
 		</dict>
+		<key>EZLoadingActivity.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
 		<key>ObjectMapper.xcscheme</key>
 		<dict>
 			<key>isShown</key>
@@ -32,17 +37,22 @@
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
+		<key>17965E0F576FD655721FE94A68C5ED8A</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>7E725A3798FE070E8AD2B06A99646FBE</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
 		<key>88E9EC28B8B46C3631E6B242B50F4442</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>B744FEEC89BD8BB0F268481A8AF59C56</key>
-		<dict>
-			<key>primary</key>
-			<true/>
-		</dict>
-		<key>C8B13DDB2BF3AC803BDE94928DD70D55</key>
+		<key>B68B30BAA59D3C581E36B229F5026576</key>
 		<dict>
 			<key>primary</key>
 			<true/>
@@ -52,7 +62,7 @@
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>F4E8F1B87366D8FB0A37E94C13DB4CC1</key>
+		<key>D17F7C21EBB2F90BD7DD6977B8167DEF</key>
 		<dict>
 			<key>primary</key>
 			<true/>
