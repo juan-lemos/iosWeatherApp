@@ -15,6 +15,7 @@
 		0E5B13961EDF9ECA00BDCD07 /* Media.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0E5B13951EDF9ECA00BDCD07 /* Media.xcassets */; };
 		0E5B139C1EDFA61C00BDCD07 /* WeatherIcon.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E5B139B1EDFA61C00BDCD07 /* WeatherIcon.swift */; };
 		0F0D5347D639FB85EB60B2FE /* Pods_obligatorio2.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8B40E852F6651BDEF8833EA7 /* Pods_obligatorio2.framework */; };
+		8EB3EEB81EEA266C00C84A9F /* WeatherDay.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EB3EEB71EEA266C00C84A9F /* WeatherDay.swift */; };
 		8EDBD2DF1EE8C212009BEE40 /* WeatherApi.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EDBD2DE1EE8C212009BEE40 /* WeatherApi.swift */; };
 		EB0D441C1EE28D5C00E6148C /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB0D441B1EE28D5C00E6148C /* MainViewController.swift */; };
 		EB0D441E1EE28D7000E6148C /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB0D441D1EE28D7000E6148C /* SettingsViewController.swift */; };
@@ -25,7 +26,7 @@
 		EB31F1C61EE9B13600E76357 /* FlickrApi.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB31F1C51EE9B13600E76357 /* FlickrApi.swift */; };
 		EB31F1C81EE9B39D00E76357 /* FlickrApiResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB31F1C71EE9B39D00E76357 /* FlickrApiResponse.swift */; };
 		EB3446041EE9BCF300CBFD04 /* defaultCityImage.jpg in Resources */ = {isa = PBXBuildFile; fileRef = EB3446031EE9BCF300CBFD04 /* defaultCityImage.jpg */; };
-		EB3E4F991EE3B07E00F441A6 /* WeatherDay.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB3E4F981EE3B07E00F441A6 /* WeatherDay.swift */; };
+		EB3E4F991EE3B07E00F441A6 /* WeatherDayAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB3E4F981EE3B07E00F441A6 /* WeatherDayAPI.swift */; };
 		EB3E4F9B1EE3B0B600F441A6 /* Day.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB3E4F9A1EE3B0B600F441A6 /* Day.swift */; };
 		EB3E4F9E1EE4538A00F441A6 /* TemperatureUnit.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB3E4F9D1EE4538A00F441A6 /* TemperatureUnit.swift */; };
 		EB72B8A01EDFC757000B5323 /* weathericons-regular-webfont.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 0E5B13981EDFA5D200BDCD07 /* weathericons-regular-webfont.ttf */; };
@@ -49,6 +50,7 @@
 		0E5B139B1EDFA61C00BDCD07 /* WeatherIcon.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WeatherIcon.swift; sourceTree = "<group>"; };
 		7E1957B2EDCC6D443DCD3D68 /* Pods-obligatorio2.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-obligatorio2.release.xcconfig"; path = "Pods/Target Support Files/Pods-obligatorio2/Pods-obligatorio2.release.xcconfig"; sourceTree = "<group>"; };
 		8B40E852F6651BDEF8833EA7 /* Pods_obligatorio2.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_obligatorio2.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		8EB3EEB71EEA266C00C84A9F /* WeatherDay.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WeatherDay.swift; sourceTree = "<group>"; };
 		8EDBD2DE1EE8C212009BEE40 /* WeatherApi.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WeatherApi.swift; sourceTree = "<group>"; };
 		AA4BE9C0FFE25E8D8B8FF088 /* Pods-obligatorio2.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-obligatorio2.debug.xcconfig"; path = "Pods/Target Support Files/Pods-obligatorio2/Pods-obligatorio2.debug.xcconfig"; sourceTree = "<group>"; };
 		EB0D441B1EE28D5C00E6148C /* MainViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
@@ -60,7 +62,7 @@
 		EB31F1C51EE9B13600E76357 /* FlickrApi.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FlickrApi.swift; sourceTree = "<group>"; };
 		EB31F1C71EE9B39D00E76357 /* FlickrApiResponse.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FlickrApiResponse.swift; sourceTree = "<group>"; };
 		EB3446031EE9BCF300CBFD04 /* defaultCityImage.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = defaultCityImage.jpg; sourceTree = "<group>"; };
-		EB3E4F981EE3B07E00F441A6 /* WeatherDay.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WeatherDay.swift; sourceTree = "<group>"; };
+		EB3E4F981EE3B07E00F441A6 /* WeatherDayAPI.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WeatherDayAPI.swift; sourceTree = "<group>"; };
 		EB3E4F9A1EE3B0B600F441A6 /* Day.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Day.swift; sourceTree = "<group>"; };
 		EB3E4F9D1EE4538A00F441A6 /* TemperatureUnit.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TemperatureUnit.swift; sourceTree = "<group>"; };
 		EB72B8A11EDFCE1C000B5323 /* city.list.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = city.list.json; sourceTree = "<group>"; };
@@ -192,7 +194,8 @@
 			isa = PBXGroup;
 			children = (
 				EB79A3BE1EE63CEA008BBE10 /* Storage */,
-				EB3E4F981EE3B07E00F441A6 /* WeatherDay.swift */,
+				EB3E4F981EE3B07E00F441A6 /* WeatherDayAPI.swift */,
+				8EB3EEB71EEA266C00C84A9F /* WeatherDay.swift */,
 				EB3E4F9A1EE3B0B600F441A6 /* Day.swift */,
 				EB3E4F9D1EE4538A00F441A6 /* TemperatureUnit.swift */,
 			);
@@ -369,7 +372,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				EB9088891EE35D9600EF6A26 /* Screen.swift in Sources */,
-				EB3E4F991EE3B07E00F441A6 /* WeatherDay.swift in Sources */,
+				EB3E4F991EE3B07E00F441A6 /* WeatherDayAPI.swift in Sources */,
 				8EDBD2DF1EE8C212009BEE40 /* WeatherApi.swift in Sources */,
 				EB3E4F9E1EE4538A00F441A6 /* TemperatureUnit.swift in Sources */,
 				EB0D44681EE31CDC00E6148C /* DayWeatherCollectionViewCell.swift in Sources */,
@@ -379,6 +382,7 @@
 				EB79A3BD1EE63CE0008BBE10 /* LocationSave.swift in Sources */,
 				0E5B13771EDF8A0300BDCD07 /* AppDelegate.swift in Sources */,
 				EB0D441E1EE28D7000E6148C /* SettingsViewController.swift in Sources */,
+				8EB3EEB81EEA266C00C84A9F /* WeatherDay.swift in Sources */,
 				EB0D44231EE28EB600E6148C /* ApisKeys.swift in Sources */,
 				EB31F1C41EE9911D00E76357 /* SettingsTableViewController.swift in Sources */,
 				EB79A3C01EE640FF008BBE10 /* WeatherSave.swift in Sources */,

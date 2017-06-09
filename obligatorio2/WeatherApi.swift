@@ -17,7 +17,7 @@ class WeatherAPI {
     let url = "http://api.openweathermap.org/data/2.5/forecast/daily?"
     
     
-    func getWeather(lat latNumber : Double, lon lonNumber : Double, days numberOfDays : Int, _ onCompletition: @escaping (_ weatherDay : [WeatherDay]?, _ error: Error? ) -> Void) {
+    func getWeather(lat latNumber : Double, lon lonNumber : Double, days numberOfDays : Int, _ onCompletition: @escaping (_ weatherDay : [WeatherDayAPI]?, _ error: Error? ) -> Void) {
         let parameters : [String:Any]  = [
             "appid" : apiKey,
             "lat" : latNumber,
@@ -35,25 +35,12 @@ class WeatherAPI {
                 let json = JSON(value)
                 
                 if let aa = json.dictionary?["list"]{
-                    
-                    
-                    //print(aa)
-                    let weather = Mapper<WeatherDay>().mapArray(JSONObject:aa.rawValue)
-//                    print ("ds")
+                    let weatherWeek = Mapper<WeatherDayAPI>().mapArray(JSONObject:aa.rawValue)
+                    onCompletition(weatherWeek, nil)
                 }
                 
-                //print(json.dictionary!["list"])
-                //let weather = Mapper<WeatherDay>().mapArray(JSONObject:json.dictionary?["list"])
-                
-              
-                //                let universities = Mapper<University>().mapArray(JSONObject: json.rawValue)
-                //                onCompletion(universities, nil)
-//                print("hola")
-            case .failure(let _):
-                print("ERROR")
-                
-                
-                //                onCompletion(nil, error)
+            case .failure(let error):
+                onCompletition(nil, error)
             }
             
         }

@@ -69,12 +69,12 @@ class SettingsViewController:UIViewController, UIGestureRecognizerDelegate{
         mapView.addAnnotation(annotation)
         annotation.coordinate = LocationSave.shared.getCoordinates()
         //show or not
-        if (actualLocation){mapView.alpha=0}
+        if actualLocation!{mapView.alpha=0}
         else{mapView.alpha=1}
     }
     
     func animateMapAppear(){
-        if (actualLocation){
+        if actualLocation!{
             UIView.animateKeyframes(withDuration: 1.0, delay: 0.0, options: [], animations: {
                 UIView.addKeyframe(withRelativeStartTime: 0.0, relativeDuration: 1, animations: {
                     self.mapView.alpha=0

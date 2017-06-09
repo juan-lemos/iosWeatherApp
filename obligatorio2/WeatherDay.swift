@@ -1,23 +1,21 @@
-
 import Foundation
-import ObjectMapper
 
-class WeatherDay : Mappable {
-    var day:Int?
-    var id:Int?
-    var icon:String?
-    var temp:Int?
-
-    required init?(map : Map){
+class WeatherDay{
+    var day:String
+    var icon:String
+    var temp:Int
+    
+    init(_ dayApi : Int, _ idApi : Int, _ iconApi : String, _ tempApi : Int){
+        day = WeatherDay.getDayOfWeek(dayApi)
+        icon = WeatherIcon(condition: idApi , iconString: iconApi).iconText
+        temp = tempApi
+        
     }
     
-    func mapping(map: Map) {
-        day <- map["dt"]
-        icon <- map["weather.0.icon"]
-        id <- map["weather.0.id"]
-        //icon = WeatherIcon(condition: id ?? 3, iconString: iconApi ?? "").iconText
-        temp <- map["temp.eve"]
-
+    fileprivate static func getDayOfWeek(_ seconds :Int) -> String {
+        let day = Date(timeIntervalSince1970: TimeInterval(seconds))
+        let formatter  = DateFormatter()
+        formatter.dateFormat = "EEE"
+        return formatter.string(from: day)
     }
-    
 }

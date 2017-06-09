@@ -37,7 +37,7 @@ class FlickrAPI {
                     
                     print(aa)
                     //print(aa)
-                    let weather = Mapper<WeatherDay>().mapArray(JSONObject:aa.rawValue)
+                   // let weather = Mapper<WeatherDay>().mapArray(JSONObject:aa.rawValue)
                     //                    print ("ds")
                 }
                 
