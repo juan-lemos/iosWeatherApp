@@ -23,6 +23,8 @@ class SettingsViewController:UIViewController, UIGestureRecognizerDelegate{
         LocationSave.shared.setCoordinates(coordinates: self.annotation.coordinate)
         LocationSave.shared.actualLocation=actualLocation
         //saveTemperatureUnit
+        print(LocationSave.shared.city)
+        print(self.annotation.coordinate)
         self.dismiss(animated: true, completion: nil)
     }
     
