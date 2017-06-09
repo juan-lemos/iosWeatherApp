@@ -21,6 +21,7 @@ class SettingsViewController:UIViewController, UIGestureRecognizerDelegate{
     
     @IBAction func guardarButtonAction(_ sender: Any) {
         LocationSave.shared.setCoordinates(coordinates: self.annotation.coordinate)
+        LocationSave.shared.setCity(location : CLLocation(latitude: self.annotation.coordinate.latitude, longitude: self.annotation.coordinate.longitude))
         LocationSave.shared.actualLocation=actualLocation
         //saveTemperatureUnit
         self.dismiss(animated: true, completion: nil)
@@ -69,12 +70,12 @@ class SettingsViewController:UIViewController, UIGestureRecognizerDelegate{
         mapView.addAnnotation(annotation)
         annotation.coordinate = LocationSave.shared.getCoordinates()
         //show or not
-        if (actualLocation){mapView.alpha=0}
+        if self.actualLocation! {mapView.alpha=0}
         else{mapView.alpha=1}
     }
     
     func animateMapAppear(){
-        if (actualLocation){
+        if self.actualLocation!{
             UIView.animateKeyframes(withDuration: 1.0, delay: 0.0, options: [], animations: {
                 UIView.addKeyframe(withRelativeStartTime: 0.0, relativeDuration: 1, animations: {
                     self.mapView.alpha=0
