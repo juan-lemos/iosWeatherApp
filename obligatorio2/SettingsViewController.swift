@@ -21,9 +21,10 @@ class SettingsViewController:UIViewController, UIGestureRecognizerDelegate{
     
     @IBAction func guardarButtonAction(_ sender: Any) {
         LocationSave.shared.setCoordinates(coordinates: self.annotation.coordinate)
-        LocationSave.shared.setCity(location : CLLocation(latitude: self.annotation.coordinate.latitude, longitude: self.annotation.coordinate.longitude))
         LocationSave.shared.actualLocation=actualLocation
         //saveTemperatureUnit
+        print(LocationSave.shared.city)
+        print(self.annotation.coordinate)
         self.dismiss(animated: true, completion: nil)
     }
     

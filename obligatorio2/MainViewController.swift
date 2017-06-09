@@ -58,16 +58,43 @@ class MainViewController:UIViewController,UICollectionViewDataSource, UICollecti
         relationWidth = Screen.shared.relationWidth
         relationHeight = Screen.shared.relationHeight
         modifyConstraintsAndFontsSizes()
-        changeBigLabelTemperature(label: temperatureLabel, temperature: "7", unit: TemperatureUnit.C)
+        changeBigLabelTemperature(label: temperatureLabel, temperature: "--", unit: TemperatureUnit.C)
         
 //        WeatherAPI.shared.getWeather(lat: -34.90, lon: -56.16, days: 7) { (_, _) in
 //        }
-        FlickrAPI.shared.getWeather { (ds, ee) in
-            
-        }
+//        FlickrAPI.shared.getWeather { (ds, ee) in
+//            
+//        }
         
     }
     
+    
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        EZLoadingActivity.show("Reloading", disableUI: false)
+        reloadModel()
+        
+    }
+    
+    
+    override func viewWillDisappear(_ animated: Bool) {
+        EZLoadingActivity.hide(true, animated: true)
+    }
+    
+    
+    //=============================================================================
+    //MARK: -reloadView
+    func reloadModel(){
+        LocationSave.shared.actualLocationAndCallWeatherApi(completion: {
+            self.reloadView()
+        })
+    }
+    
+    func reloadView()  {
+        //print(LocationSave.shared.city)
+        cityLabel.text=LocationSave.shared.city
+        EZLoadingActivity.hide(true, animated: true)
+    }
     
 //=============================================================================
     //MARK: -UICollectionViewDelegateFlowLayout
@@ -119,7 +146,7 @@ class MainViewController:UIViewController,UICollectionViewDataSource, UICollecti
     
     
 //=============================================================================
-    //MARK: -Change UI methods
+    //MARK: -Change UI by screen size methods
     func modifyConstraintsAndFontsSizes(){
         cityLabelTopConstraint.constant = cityLabelTopConstraintConstant * relationHeight
         buttonTopConstraint.constant = buttonTopConstraintConstant * relationHeight
