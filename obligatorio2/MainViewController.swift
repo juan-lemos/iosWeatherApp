@@ -76,19 +76,26 @@ class MainViewController:UIViewController,UICollectionViewDataSource, UICollecti
     //=============================================================================
     //MARK: -reloadView
     func reloadModel(){
-        LocationSave.shared.actualLocationAndCallWeatherApi(completion: {
-            WeatherAPI.shared.getWeekWeather(lat: LocationSave.shared.latitude,
-                                             lon: LocationSave.shared.longitude,
-                                             days: 7) { (weatherList, error) in
-                                                self.reloadView()
+        LocationSave.shared.actualLocationAndCallWeatherApi{ (error) in
+            if let _ = error {
+                EZLoadingActivity.hide(false, animated: true)
+            }else{
+                WeatherAPI.shared.getWeekWeather(lat: LocationSave.shared.latitude,
+                                                 lon: LocationSave.shared.longitude,
+                                                 days: 7) { (weatherList, error) in
+                                                    if let _ = error {
+                                                        EZLoadingActivity.hide(false, animated: true)
+                                                    }else {
+                                                        self.reloadView()
+                                                    }
+                }
             }
-        })
+        }
     }
     
     func reloadView()  {
         cityLabel.text=LocationSave.shared.city
         if let weekWeather =  WeatherSave.shared.weekWeather{
-            
             changeBigLabelTemperature(label: temperatureLabel, temperature: "\(weekWeather[0].getTemperatureInActualUnits())" , unit: WeatherSave.shared.unit)
             weatherIconLabel.text = weekWeather[0].icon
             collectionView.reloadData()
@@ -97,8 +104,6 @@ class MainViewController:UIViewController,UICollectionViewDataSource, UICollecti
         }
         else{
             changeBigLabelTemperature(label: temperatureLabel, temperature: "--" , unit: WeatherSave.shared.unit)
-            
-            
             EZLoadingActivity.hide(false, animated: true)
         }
         
@@ -106,7 +111,7 @@ class MainViewController:UIViewController,UICollectionViewDataSource, UICollecti
     
     //=============================================================================
     //MARK: -UICollectionViewDelegateFlowLayout
-
+    
     func collectionView(_ collectionView: UICollectionView,
                         layout collectionViewLayout: UICollectionViewLayout,
                         sizeForItemAt indexPath: IndexPath) -> CGSize {

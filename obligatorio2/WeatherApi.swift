@@ -49,7 +49,7 @@ class WeatherAPI {
     //
     //    }
     
-    enum MyError: Error {
+    enum WeatherAPIError: Error {
         case FoundNil(String)
     }
     
@@ -79,7 +79,7 @@ class WeatherAPI {
                         }
                     }
                 }
-                onCompletition(nil, MyError.FoundNil("Error Casting"))
+                onCompletition(nil, WeatherAPIError.FoundNil("Error Casting"))
             case .failure(let error):
                 onCompletition(nil, error)
             }

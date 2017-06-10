@@ -19,18 +19,21 @@ class LocationSave{
     //=============================================================================
     //MARK: -methods to call city
     
-    func actualLocationAndCallWeatherApi(completion:@escaping ()->()){
+    func actualLocationAndCallWeatherApi(completion:@escaping (Error?)->()){
         if actualLocation{
             Location.getLocation(accuracy: .city, frequency: .oneShot,
                                  success: {(locationRequest, location) -> (Void) in
+                                    self.latitude = location.coordinate.latitude
+                                    self.longitude = location.coordinate.longitude
                                     self.setCity(location: location, completion: {
-                                        completion()
+                                        completion(nil)
                                     })
-            }) { (locationRequest, location, error) -> (Void) in
-            }
+            }, error: { (_, _, _) -> (Void) in
+                completion(nil)
+            })
         }else{
             self.setCity(location: CLLocation(latitude: self.latitude, longitude: self.longitude), completion: {
-                completion()
+                completion(nil)
             })
             
         }
@@ -44,9 +47,13 @@ class LocationSave{
                 // City
                 if let city = placeMark.addressDictionary!["City"] as? NSString {
                     self.city = "\(city)"
+                    completion()
+                    return
                 }
             }
+            self.city = "..."
             completion()
+            return
         })
     }
     
