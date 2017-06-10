@@ -40,12 +40,11 @@ class LocationSave{
         let geoCoder = CLGeocoder()
         geoCoder.reverseGeocodeLocation(location, completionHandler: { (placemarks, error) -> Void in
             // Place details
-            var placeMark: CLPlacemark!
-            placeMark = placemarks?[0]
-            
-            // City
-            if let city = placeMark.addressDictionary!["City"] as? NSString {
-                self.city = "\(city)"
+            if let placeMark = placemarks?[0]{
+                // City
+                if let city = placeMark.addressDictionary!["City"] as? NSString {
+                    self.city = "\(city)"
+                }
             }
             completion()
         })
@@ -53,7 +52,7 @@ class LocationSave{
     
     //=============================================================================
     //MARK: -methods called from SettingsViewController
-
+    
     
     func getCoordinates()->CLLocationCoordinate2D{
         return CLLocationCoordinate2D(latitude: latitude, longitude: longitude)

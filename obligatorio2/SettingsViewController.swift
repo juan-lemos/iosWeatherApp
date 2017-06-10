@@ -33,7 +33,7 @@ class SettingsViewController:UIViewController, UIGestureRecognizerDelegate{
     override func viewDidLoad() {
         super.viewDidLoad()
         actualLocation=LocationSave.shared.actualLocation
-        temperatureUnit = TemperatureUnit.C /// GO TO SAVED TEMP UNIT
+        temperatureUnit = WeatherSave.shared.unit
         mapInitialization()
     }
     //2
