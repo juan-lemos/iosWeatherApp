@@ -52,7 +52,6 @@ class MainViewController:UIViewController,UICollectionViewDataSource, UICollecti
     
     //=============================================================================
     //MARK: -UIViewController methods
-    
     override func viewDidLoad() {
         super.viewDidLoad()
         relationWidth = Screen.shared.relationWidth
@@ -62,14 +61,12 @@ class MainViewController:UIViewController,UICollectionViewDataSource, UICollecti
         reloadView()
     }
     
-    
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
         EZLoadingActivity.show("", disableUI: false)
         reloadModel()
         
     }
-    
     
     override func viewWillDisappear(_ animated: Bool) {
         EZLoadingActivity.hide(true, animated: true)
@@ -91,6 +88,7 @@ class MainViewController:UIViewController,UICollectionViewDataSource, UICollecti
     func reloadView()  {
         cityLabel.text=LocationSave.shared.city
         if let weekWeather =  WeatherSave.shared.weekWeather{
+            
             changeBigLabelTemperature(label: temperatureLabel, temperature: "\(weekWeather[0].getTemperatureInActualUnits())" , unit: WeatherSave.shared.unit)
             weatherIconLabel.text = weekWeather[0].icon
             collectionView.reloadData()
@@ -98,6 +96,9 @@ class MainViewController:UIViewController,UICollectionViewDataSource, UICollecti
             
         }
         else{
+            changeBigLabelTemperature(label: temperatureLabel, temperature: "--" , unit: WeatherSave.shared.unit)
+            
+            
             EZLoadingActivity.hide(false, animated: true)
         }
         
@@ -105,8 +106,7 @@ class MainViewController:UIViewController,UICollectionViewDataSource, UICollecti
     
     //=============================================================================
     //MARK: -UICollectionViewDelegateFlowLayout
-    
-    
+
     func collectionView(_ collectionView: UICollectionView,
                         layout collectionViewLayout: UICollectionViewLayout,
                         sizeForItemAt indexPath: IndexPath) -> CGSize {
