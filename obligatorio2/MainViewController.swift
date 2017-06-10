@@ -2,7 +2,7 @@ import UIKit
 import EZLoadingActivity
 
 class MainViewController:UIViewController,UICollectionViewDataSource, UICollectionViewDelegateFlowLayout{
-//=============================================================================
+    //=============================================================================
     //MARK: -constraints
     @IBOutlet weak var cityLabelTopConstraint: NSLayoutConstraint!
     @IBOutlet weak var buttonTopConstraint: NSLayoutConstraint!
@@ -13,15 +13,15 @@ class MainViewController:UIViewController,UICollectionViewDataSource, UICollecti
     @IBOutlet weak var collectionViewHeight: NSLayoutConstraint!
     
     
-//=============================================================================
+    //=============================================================================
     //MARK: -view elements
     @IBOutlet weak var cityLabel: UILabel!
     @IBOutlet weak var settingsButton: UIButton!
     @IBOutlet weak var weatherIconLabel: UILabel!
     @IBOutlet weak var temperatureLabel: UILabel!
     @IBOutlet weak var backgroundViewImage: UIImageView!
-    
-//=============================================================================
+    @IBOutlet weak var collectionView: UICollectionView!
+    //=============================================================================
     //MARK: -constants constraints
     let cityLabelTopConstraintConstant: CGFloat = 20
     let buttonTopConstraintConstant: CGFloat = 15
@@ -33,8 +33,8 @@ class MainViewController:UIViewController,UICollectionViewDataSource, UICollecti
     
     let cellWeatherIconLabelTopConstraintConstant : CGFloat = 4
     let cellTemperatureLabelTopConstraintConstant : CGFloat = 3
-
-//=============================================================================
+    
+    //=============================================================================
     //MARK: -constants fonts
     let cityLabelFontSize : CGFloat = 35
     let weatherIconLabelFontSize : CGFloat = 144
@@ -44,13 +44,13 @@ class MainViewController:UIViewController,UICollectionViewDataSource, UICollecti
     let cellWeatherIconLabelFontSize : CGFloat = 39
     let cellTemperatureLabelFontSize : CGFloat = 26
     
-//=============================================================================
+    //=============================================================================
     //MARK: -variables of Controller
     var relationWidth:CGFloat!
     var relationHeight:CGFloat!
     let cellCollectionViewIdentifier:String="dayWeatherCollectionViewCell"
     
-//=============================================================================
+    //=============================================================================
     //MARK: -UIViewController methods
     
     override func viewDidLoad() {
@@ -58,20 +58,14 @@ class MainViewController:UIViewController,UICollectionViewDataSource, UICollecti
         relationWidth = Screen.shared.relationWidth
         relationHeight = Screen.shared.relationHeight
         modifyConstraintsAndFontsSizes()
-        changeBigLabelTemperature(label: temperatureLabel, temperature: "--", unit: TemperatureUnit.C)
-        
-//        WeatherAPI.shared.getWeather(lat: -34.90, lon: -56.16, days: 7) { (_, _) in
-//        }
-//        FlickrAPI.shared.getWeather { (ds, ee) in
-//            
-//        }
-        
+        ModelManager.loadSettings()
+        reloadView()
     }
     
     
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
-        EZLoadingActivity.show("Reloading", disableUI: false)
+        EZLoadingActivity.show("", disableUI: false)
         reloadModel()
         
     }
@@ -86,24 +80,37 @@ class MainViewController:UIViewController,UICollectionViewDataSource, UICollecti
     //MARK: -reloadView
     func reloadModel(){
         LocationSave.shared.actualLocationAndCallWeatherApi(completion: {
-            self.reloadView()
+            WeatherAPI.shared.getWeekWeather(lat: LocationSave.shared.latitude,
+                                             lon: LocationSave.shared.longitude,
+                                             days: 7) { (weatherList, error) in
+                                                self.reloadView()
+            }
         })
     }
     
     func reloadView()  {
-        //print(LocationSave.shared.city)
         cityLabel.text=LocationSave.shared.city
-        EZLoadingActivity.hide(true, animated: true)
+        if let weekWeather =  WeatherSave.shared.weekWeather{
+            changeBigLabelTemperature(label: temperatureLabel, temperature: "\(weekWeather[0].getTemperatureInActualUnits())" , unit: WeatherSave.shared.unit)
+            weatherIconLabel.text = weekWeather[0].icon
+            collectionView.reloadData()
+            EZLoadingActivity.hide(true, animated: true)
+            
+        }
+        else{
+            EZLoadingActivity.hide(false, animated: true)
+        }
+        
     }
     
-//=============================================================================
+    //=============================================================================
     //MARK: -UICollectionViewDelegateFlowLayout
     
     
     func collectionView(_ collectionView: UICollectionView,
                         layout collectionViewLayout: UICollectionViewLayout,
                         sizeForItemAt indexPath: IndexPath) -> CGSize {
-
+        
         let widthPerItem = collectionView.bounds.size.width / 4
         return CGSize(width: widthPerItem, height: collectionView.bounds.size.height)
     }
@@ -114,15 +121,15 @@ class MainViewController:UIViewController,UICollectionViewDataSource, UICollecti
         return 0
     }
     
-//=============================================================================
+    //=============================================================================
     //MARK: -UICollectionDataSource
-
+    
     func numberOfSections(in collectionView: UICollectionView) -> Int {
         return 1
     }
     
     func collectionView(_ collectionView: UICollectionView,
-                                 numberOfItemsInSection section: Int) -> Int {
+                        numberOfItemsInSection section: Int) -> Int {
         return 6
     }
     
@@ -133,19 +140,31 @@ class MainViewController:UIViewController,UICollectionViewDataSource, UICollecti
         
         cell.weatherIconLabelTopConstraint.constant = cellWeatherIconLabelTopConstraintConstant * relationHeight
         cell.temperatureLabelTopConstraint.constant = cellTemperatureLabelTopConstraintConstant * relationHeight
-        changeSmallLabelTemperature(label:cell.temperatureLabel, temperature:"10", unit:TemperatureUnit.C)
         cell.weatherIconLabel.font = UIFont(name: cell.weatherIconLabel.font.fontName , size: cellWeatherIconLabelFontSize * relationHeight)
-        
         var multiplier:CGFloat = 1.0
         if (Screen.shared.screenHeight==Screen.shared.iphone4sScreenHeight){//iphone4
             multiplier = 1.2
         }
         cell.dayLabel.font = UIFont(name: cell.dayLabel.font.fontName , size: cellDayLabelFontSize * relationHeight * multiplier)
+        
+        var day = "---"
+        var icon = ""
+        var temp = "--"
+        
+        if let weatherDay = WeatherSave.shared.weekWeather{
+            day = weatherDay[indexPath.row+1].day
+            icon = weatherDay[indexPath.row+1].icon
+            temp = "\(weatherDay[indexPath.row+1].getTemperatureInActualUnits())"
+        }
+        
+        cell.dayLabel.text = day
+        cell.weatherIconLabel.text=icon
+        changeSmallLabelTemperature(label:cell.temperatureLabel, temperature:temp, unit: WeatherSave.shared.unit)
         return cell
     }
     
     
-//=============================================================================
+    //=============================================================================
     //MARK: -Change UI by screen size methods
     func modifyConstraintsAndFontsSizes(){
         cityLabelTopConstraint.constant = cityLabelTopConstraintConstant * relationHeight

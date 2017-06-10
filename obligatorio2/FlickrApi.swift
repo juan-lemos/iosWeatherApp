@@ -48,7 +48,7 @@ class FlickrAPI {
                 //                let universities = Mapper<University>().mapArray(JSONObject: json.rawValue)
                 //                onCompletion(universities, nil)
             //                print("hola")
-            case .failure(let _):
+            case .failure( _):
                 print("ERROR")
                 
                 
