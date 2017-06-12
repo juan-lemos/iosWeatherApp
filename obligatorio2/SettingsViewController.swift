@@ -67,6 +67,7 @@ class SettingsViewController:UIViewController, UIGestureRecognizerDelegate{
         gestureRecognizer.delegate = self
         mapView.addGestureRecognizer(gestureRecognizer)
         mapView.addAnnotation(annotation)
+        mapView.setRegion(MKCoordinateRegion(center:CLLocationCoordinate2D(latitude: LocationSave.shared.latitude, longitude: LocationSave.shared.longitude), span: MKCoordinateSpan(latitudeDelta: 7, longitudeDelta: 7)), animated: false)
         annotation.coordinate = LocationSave.shared.getCoordinates()
         //show or not
         if actualLocation!{mapView.alpha=0}
