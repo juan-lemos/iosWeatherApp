@@ -11,44 +11,10 @@ import ObjectMapper
 import SwiftyJSON
 
 class WeatherAPI {
-    
     public static let shared = WeatherAPI()
-    
     let url = "http://api.openweathermap.org/data/2.5/forecast/daily?"
-    //    let urlCurrent = "http://api.openweathermap.org/data/2.5/weather?"
     
-    //    func getCurrentWeather(lat latNumber : Double, lon lonNumber : Double, _ onCompletition: @escaping (_ weatherDay : [WeatherDayAPI]?, _ error: Error? ) -> Void) {
-    //        let parameters : [String:Any] = [
-    //            "appid" : ApisKey.apiKeyWeather.rawValue,
-    //            "lat" : latNumber,
-    //            "lon" : lonNumber,
-    //            "units" : "metric"]
-    //
-    //        Alamofire.request(urlCurrent, method: .get, parameters: parameters, encoding: URLEncoding(), headers: [:]).validate().responseJSON {
-    //            (response : DataResponse<Any>) -> () in
-    //
-    //
-    //            switch response.result {
-    //            case .success(let value):
-    //                let json = JSON(value)
-    //                print(json)
-    //                if let daysList = json.dictionary?["list"]{
-    //                    let weatherWeek = Mapper<WeatherDayAPI>().mapArray(JSONObject:daysList.rawValue)
-    //
-    //
-    //                    onCompletition(weatherWeek, nil)
-    //                }
-    //
-    //            case .failure(let error):
-    //
-    //                print(error)
-    //                onCompletition(nil, error)
-    //            }
-    //
-    //        }
-    //
-    //    }
-    
+    private init() {}
     enum WeatherAPIError: Error {
         case FoundNil(String)
     }

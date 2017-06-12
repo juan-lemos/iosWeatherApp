@@ -8,7 +8,9 @@ class LocationSave{
     var actualLocation = true
     var latitude:Double = 0
     var longitude:Double = 0
-    var city:String = "..."
+    var city:String = LocationSave.noCityName
+    public static let  noCityName="..."
+    
     
     public static let shared:LocationSave = LocationSave()
     
@@ -51,7 +53,7 @@ class LocationSave{
                     return
                 }
             }
-            self.city = "..."
+            self.city = LocationSave.noCityName
             completion()
             return
         })

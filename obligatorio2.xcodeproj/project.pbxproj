@@ -133,7 +133,7 @@
 		8EDBD2DD1EE8C1F8009BEE40 /* API */ = {
 			isa = PBXGroup;
 			children = (
-				8EDBD2DE1EE8C212009BEE40 /* WeatherApi.swift */,
+				EB4DCFB71EEC940F000AFDBF /* WeatherApi */,
 				EB31F1C91EE9B3B300E76357 /* FlickrApi */,
 			);
 			name = API;
@@ -189,11 +189,19 @@
 			isa = PBXGroup;
 			children = (
 				EB79A3BE1EE63CEA008BBE10 /* Storage */,
-				EB3E4F981EE3B07E00F441A6 /* WeatherDayAPI.swift */,
 				8EB3EEB71EEA266C00C84A9F /* WeatherDay.swift */,
 				EB3E4F9D1EE4538A00F441A6 /* TemperatureUnit.swift */,
 			);
 			name = Model;
+			sourceTree = "<group>";
+		};
+		EB4DCFB71EEC940F000AFDBF /* WeatherApi */ = {
+			isa = PBXGroup;
+			children = (
+				8EDBD2DE1EE8C212009BEE40 /* WeatherApi.swift */,
+				EB3E4F981EE3B07E00F441A6 /* WeatherDayAPI.swift */,
+			);
+			name = WeatherApi;
 			sourceTree = "<group>";
 		};
 		EB72B8A31EDFCE2A000B5323 /* images */ = {

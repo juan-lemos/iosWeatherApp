@@ -58,7 +58,7 @@ class MainViewController:UIViewController,UICollectionViewDataSource, UICollecti
         relationHeight = Screen.shared.relationHeight
         modifyConstraintsAndFontsSizes()
         ModelManager.loadSettings()
-        reloadView()
+        reloadView(reloadImage:false)
     }
     
     override func viewDidAppear(_ animated: Bool) {
@@ -74,7 +74,7 @@ class MainViewController:UIViewController,UICollectionViewDataSource, UICollecti
     
     
     //=============================================================================
-    //MARK: -reloadView
+    //MARK: -reloadView and model
     func reloadModel(){
         LocationSave.shared.actualLocationAndCallWeatherApi{ (error) in
             if let _ = error {
@@ -86,28 +86,42 @@ class MainViewController:UIViewController,UICollectionViewDataSource, UICollecti
                                                     if let _ = error {
                                                         EZLoadingActivity.hide(false, animated: true)
                                                     }else {
-                                                        self.reloadView()
+                                                        self.reloadView(reloadImage:true)
                                                     }
                 }
             }
         }
     }
     
-    func reloadView()  {
+    func reloadView(reloadImage :Bool)  {
         cityLabel.text=LocationSave.shared.city
-        if let weekWeather =  WeatherSave.shared.weekWeather{
+        if let weekWeather =  WeatherSave.shared.weekWeather{//nothing loaded?
             changeBigLabelTemperature(label: temperatureLabel, temperature: "\(weekWeather[0].getTemperatureInActualUnits())" , unit: WeatherSave.shared.unit)
             weatherIconLabel.text = weekWeather[0].icon
             collectionView.reloadData()
             EZLoadingActivity.hide(true, animated: true)
-            
         }
         else{
             changeBigLabelTemperature(label: temperatureLabel, temperature: "--" , unit: WeatherSave.shared.unit)
             EZLoadingActivity.hide(false, animated: true)
         }
-        
+        if(reloadImage){
+            self.reloadImage()
+        }
     }
+    
+    private func reloadImage(){
+        FlickrAPI.shared.getPhoto(latitude: LocationSave.shared.latitude ,longitude: LocationSave.shared.longitude, { (image, error) in
+            if let image = image{
+                self.backgroundViewImage.image = image
+            }else{
+                self.backgroundViewImage.image = #imageLiteral(resourceName: "defaultCityImage.jpg")
+            }
+            
+        })
+    }
+    
+    
     
     //=============================================================================
     //MARK: -UICollectionViewDelegateFlowLayout
