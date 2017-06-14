@@ -44,6 +44,8 @@ class MainViewController:UIViewController,UICollectionViewDataSource, UICollecti
     let cellWeatherIconLabelFontSize : CGFloat = 39
     let cellTemperatureLabelFontSize : CGFloat = 26
     
+    
+    
     //=============================================================================
     //MARK: -variables of Controller
     var relationWidth:CGFloat!
@@ -54,6 +56,7 @@ class MainViewController:UIViewController,UICollectionViewDataSource, UICollecti
     //MARK: -UIViewController methods
     override func viewDidLoad() {
         super.viewDidLoad()
+        NotificationCenter.default.addObserver(self, selector: #selector(self.viewDidAppear(_:)), name: AppDelegate.notificationName, object: nil)
         relationWidth = Screen.shared.relationWidth
         relationHeight = Screen.shared.relationHeight
         modifyConstraintsAndFontsSizes()
@@ -63,15 +66,19 @@ class MainViewController:UIViewController,UICollectionViewDataSource, UICollecti
     
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
-        EZLoadingActivity.show("", disableUI: false)
+        EZLoadingActivity.show("Loading...", disableUI: false)
         reloadModel()
         
     }
     
     override func viewWillDisappear(_ animated: Bool) {
+        super.viewWillDisappear(animated)
         EZLoadingActivity.hide(true, animated: true)
     }
     
+    deinit {
+        NotificationCenter.default.removeObserver(self)
+    }
     
     //=============================================================================
     //MARK: -reloadView and model
@@ -121,6 +128,7 @@ class MainViewController:UIViewController,UICollectionViewDataSource, UICollecti
         })
     }
     
+
     
     
     //=============================================================================
@@ -212,11 +220,12 @@ class MainViewController:UIViewController,UICollectionViewDataSource, UICollecti
     }
     
     func changeLabelTemperature(label:UILabel, originalMaxSize:CGFloat, temperature:String, unit:TemperatureUnit){
+        let baseLineRelation : CGFloat = 8/temperatureLabelFontSize
         let bigFontSize = originalMaxSize * relationHeight
         let smallFontSize = bigFontSize * Screen.shared.smallBigFontTemperatureRelation
         let myMutableString = NSMutableAttributedString(string: "\(temperature)\(unit.rawValue)")
         myMutableString.addAttributes([NSFontAttributeName:UIFont(name: "HelveticaNeue-Medium", size: bigFontSize)!], range: NSRange(location:0,length:"\(temperature)".characters.count))
-        myMutableString.addAttributes([NSFontAttributeName:UIFont(name: "HelveticaNeue-Medium", size: smallFontSize)!], range: NSRange(location:"\(temperature)".characters.count,length:unit.rawValue.characters.count))
+        myMutableString.addAttributes([NSFontAttributeName:UIFont(name: "HelveticaNeue-Medium", size: smallFontSize)! , NSBaselineOffsetAttributeName: baseLineRelation * originalMaxSize], range: NSRange(location:"\(temperature)".characters.count,length:unit.rawValue.characters.count))
         label.attributedText = myMutableString
     }
 }

@@ -54,7 +54,7 @@ class FlickrAPI {
     }
     
     //=============================================================================
-    //MARK: -get image from api
+    //MARK: -download image from internet
     private func getImage(imageUrl:String,onCompletition: @escaping (_ flickrImage : UIImage?)->Void) {
         //        let imageview = UIImageView()
         let url = URL(string: imageUrl)

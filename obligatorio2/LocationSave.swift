@@ -23,7 +23,7 @@ class LocationSave{
     
     func actualLocationAndCallWeatherApi(completion:@escaping (Error?)->()){
         if actualLocation{
-            Location.getLocation(accuracy: .city, frequency: .oneShot,
+            Location.getLocation(accuracy: .room, frequency: .oneShot,
                                  success: {(locationRequest, location) -> (Void) in
                                     self.latitude = location.coordinate.latitude
                                     self.longitude = location.coordinate.longitude
